@@ -17,10 +17,89 @@ h2{font-size:23px;margin:31px 0 13px}.scheme-hint{margin:-4px 0 14px;color:var(-
 .fare-note{margin:0 0 14px;padding:11px 13px;border-radius:12px;background:#f8fafc;border:1px solid var(--line);color:#475467;font-size:13px}.date-panel{display:none}.date-panel.active{display:block}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:12px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}th{font-size:13px;color:#475467;background:#f8fafc}tr:last-child td{border-bottom:0}.airline{font-weight:800}.flight{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800}.badge{display:inline-block;border-radius:999px;padding:3px 7px;font-size:12px;font-weight:750}.badge.fsc{background:#eef4ff;color:var(--fsc)}.badge.lcc{background:#fff7ed;color:var(--lcc)}.badge.airport{background:#f2f4f7;color:#344054}.fare{font-weight:800;color:#344054;white-space:nowrap}.best{color:var(--green);font-weight:800}.warn{color:var(--orange);font-weight:750}
 tr.scheme-highlight td{background:#fff7cc!important;box-shadow:inset 0 1px 0 #f4c430,inset 0 -1px 0 #f4c430}tr.scheme-highlight td:first-child{box-shadow:inset 4px 0 0 #f4c430,inset 0 1px 0 #f4c430,inset 0 -1px 0 #f4c430}.sources{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}.sources li{margin:8px 0}.small{font-size:13px;color:var(--muted)}.footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:25px}
 @media(max-width:760px){.container{padding:12px 10px 36px}.hero{padding:22px 18px;border-radius:18px}.cards{grid-template-columns:1fr}.time{min-height:auto}h2{font-size:21px}}
+
+/* === Korean travel magazine visual === */
+:root{
+  --bg:#f6f2ec;--card:#fffdfa;--ink:#202b33;--muted:#756b63;--line:#e8ddd1;
+  --navy:#244056;--blue:#5f8098;--green:#657164;--orange:#bf7b53;
+  --fsc-bg:#edf3f7;--fsc:#355c78;--lcc-bg:#fcf0e5;--lcc:#b6693e;
+}
+body{
+  background:linear-gradient(180deg,#fbf7f2 0%,#f6efe7 42%,#f3eee8 100%);
+  color:var(--ink);
+}
+.container{padding-top:26px}
+.hero{
+  position:relative;overflow:hidden;min-height:400px;border-radius:28px;
+  padding:34px 34px 144px;color:#fff;
+  background-image:
+    linear-gradient(180deg,rgba(18,31,42,.18) 0%,rgba(18,31,42,.10) 20%,rgba(18,31,42,.34) 52%,rgba(18,31,42,.80) 100%),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Haeundae_District_and_Beach.jpg/1280px-Haeundae_District_and_Beach.jpg');
+  background-size:cover;background-position:center center;
+  box-shadow:0 22px 48px rgba(64,71,74,.14);
+}
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(25,35,42,.58) 0%,rgba(25,35,42,.42) 34%,rgba(25,35,42,.18) 62%,rgba(25,35,42,.08) 100%);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";position:absolute;inset:auto 0 0 0;height:180px;
+  background:linear-gradient(180deg,rgba(22,33,40,0) 0%,rgba(22,33,40,.70) 100%);
+  pointer-events:none;
+}
+.hero h1,.hero p,.hero .hero-pills,.hero .hero-credit{position:relative;z-index:2;max-width:680px}
+.hero h1{font-size:clamp(31px,4.5vw,46px);letter-spacing:.01em;line-height:1.15;margin-bottom:14px;text-shadow:0 1px 2px rgba(0,0,0,.18)}
+.hero p{color:#f7f3ef;max-width:560px}
+.hero p:nth-of-type(1){display:inline-block;margin-bottom:8px;padding-top:10px;border-top:1px solid rgba(255,255,255,.34)}
+.hero-pills{margin-top:18px;gap:10px}
+.hero-pill{background:rgba(255,251,247,.12);border:1px solid rgba(255,248,243,.18);color:#fffaf5;backdrop-filter:blur(10px)}
+.hero-credit{position:absolute;right:20px;bottom:14px;max-width:none;font-size:11px;color:rgba(255,248,242,.74);letter-spacing:.02em;text-align:right}
+h2{position:relative;color:#223c4e;letter-spacing:.01em;margin-top:34px;margin-bottom:14px;padding-bottom:10px}
+h2:after{content:"";position:absolute;left:0;bottom:0;width:56px;height:2px;background:linear-gradient(90deg,#9b6d4f,#d5b496);border-radius:999px}
+.scheme-hint,.selected-scheme-status,.fare-note,.sources .small{color:#6b625c}
+.cards{gap:16px}
+.card{
+  background:linear-gradient(180deg,rgba(255,253,249,.98) 0%,rgba(255,251,247,.98) 100%);
+  border:1px solid #ebdfd2;border-radius:22px;box-shadow:0 14px 28px rgba(96,87,79,.07)
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(96,87,79,.11)}
+.card.selected{border:2px solid #7090a5;background:linear-gradient(180deg,#fffefc 0%,#f3f7f8 100%)}
+.card.selected:after{background:#7090a5;letter-spacing:.03em}
+.card h3{font-size:19px;line-height:1.35}
+.route{color:#85776d;font-size:14px;letter-spacing:.01em}
+.scheme-price{background:#fbf5ee;border-color:#ede1d3;border-radius:14px}
+.price-total strong{color:#2e5168}
+.time{font-size:21px;line-height:1.5;color:#263844}
+.tag{border-radius:999px;font-weight:800;letter-spacing:.03em}
+.tag.green{background:#edf3ee;color:#5f7064}.tag.blue{background:#edf3f6;color:#48667c}.tag.orange{background:#f9ecdf;color:#ae6a40}
+.tabs,.filters{gap:10px}
+button{background:rgba(255,251,247,.95);border-color:#eadfcf;color:#625b54;box-shadow:0 2px 7px rgba(91,82,75,.04)}
+button.active{background:#4c6b80;border-color:#4c6b80;color:#fff}
+.selected-scheme-status{background:#fbf3eb;border:1px solid #ebddce}
+.selected-scheme-status.active{background:#eef4f7;border-color:#cfdee7;color:#416276}
+.table-wrap,.sources{background:rgba(255,252,248,.98);border-color:#eadfcf;box-shadow:0 10px 24px rgba(104,95,87,.045);border-radius:18px}
+th{background:#f6eee6;color:#62554a}
+.badge.airport{background:#f4ede4;color:#6b5d54}.badge.fsc{background:#edf4f7;color:#48667c}.badge.lcc{background:#fbefe4;color:#af6a40}
+.fare-note{background:#fbf5ee;border-color:#eddfd1}
+tr.scheme-highlight td{background:#fff3dc!important;box-shadow:inset 0 1px 0 #d9a76a,inset 0 -1px 0 #d9a76a}
+tr.scheme-highlight td:first-child{box-shadow:inset 4px 0 0 #d9a76a,inset 0 1px 0 #d9a76a,inset 0 -1px 0 #d9a76a}
+.footer{color:#988b80}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+@media(max-width:760px){
+  .container{padding:12px 10px 36px}
+  .hero{min-height:360px;padding:22px 18px 122px;border-radius:20px;background-position:58% center}
+  .hero:before{background:linear-gradient(180deg,rgba(25,35,42,.34) 0%,rgba(25,35,42,.30) 28%,rgba(25,35,42,.66) 100%)}
+  .hero h1{font-size:30px}.hero p:nth-of-type(1){padding-top:8px}
+  .hero-credit{left:18px;right:18px;text-align:left;bottom:10px;font-size:10px}
+  .time{min-height:auto}h2{font-size:21px}
+}
+/* === end Korean travel magazine visual === */
+
 </style>
 </head>
 <body><div class="container">
-<section class="hero"><h1>2026 釜山家族旅行｜航班選擇</h1><p>4 位長輩＋3 位年輕人，共 7 位</p><p>比較航空：中華航空、長榮航空、星宇航空、台灣虎航、濟州航空、釜山航空</p><div class="hero-pills"><span class="hero-pill">去程：11/14（六）或 11/15（日）</span><span class="hero-pill">回程：11/19（四）或 11/20（五）</span><span class="hero-pill">機場：高雄／台中／桃園</span><span class="hero-pill">班表查核：2026/09/22</span></div></section>
+<section class="hero"><h1>2026 釜山家族旅行｜航班選擇</h1><p>4 位長輩＋3 位年輕人，共 7 位</p><p>比較航空：中華航空、長榮航空、星宇航空、台灣虎航、濟州航空、釜山航空</p><div class="hero-pills"><span class="hero-pill">去程：11/14（六）或 11/15（日）</span><span class="hero-pill">回程：11/19（四）或 11/20（五）</span><span class="hero-pill">機場：高雄／台中／桃園</span><span class="hero-pill">班表查核：2026/09/22</span></div><div class="hero-credit">Photo: Masterhatch / Wikimedia Commons · CC BY-SA 4.0</div></section>
 
 <h2>航班方案比較</h2><div class="scheme-hint">點選任一方案，可在下方完整航班表自動標示該方案使用的航班。</div>
 <div class="cards">
