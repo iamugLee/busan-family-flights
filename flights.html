@@ -2,124 +2,77 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2026 釜山家族旅行航班方案與時刻比較：保留 2026/09/22 歷史估算，查看日期、機場、航空公司與票價區間。">
 <title>航班選擇｜2026 釜山家族旅行</title>
-<style>
-:root{--bg:#f4f6f8;--card:#fff;--ink:#1f2937;--muted:#667085;--line:#e5e7eb;--navy:#18384f;--blue:#2563eb;--green:#0f766e;--orange:#b45309;--fsc:#1d4ed8;--lcc:#c2410c}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.55}
-.container{max-width:1180px;margin:auto;padding:22px 16px 56px}.hero{padding:28px;border-radius:22px;color:#fff;background:linear-gradient(135deg,#18384f,#235f78);box-shadow:0 16px 36px rgba(24,56,79,.16)}
-.hero h1{margin:0 0 8px;font-size:clamp(27px,4vw,42px);line-height:1.2}.hero p{margin:5px 0;color:#e8f0f5}.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.hero-pill{padding:6px 10px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.10);font-size:13px}
-h2{font-size:23px;margin:31px 0 13px}.scheme-hint{margin:-4px 0 14px;color:var(--muted);font-size:14px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 4px 16px rgba(0,0,0,.035);cursor:pointer;transition:.16s;position:relative;display:flex;flex-direction:column}.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.07)}.card.selected{border:2px solid var(--blue);background:#f8fbff}.card.selected:after{content:"已選擇";position:absolute;top:12px;right:12px;background:var(--blue);color:#fff;font-size:12px;font-weight:800;padding:4px 8px;border-radius:999px}
-.tag{display:inline-block;width:max-content;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:750;margin-bottom:8px}.tag.green{background:#ccfbf1;color:#115e59}.tag.blue{background:#dbeafe;color:#1e40af}.tag.orange{background:#ffedd5;color:#9a3412}
-.card h3{font-size:18px;margin:0}.route{margin:5px 0;color:var(--muted);font-size:14px}.scheme-price{margin:10px 0 11px;padding:10px 12px;background:#f8fafc;border:1px solid var(--line);border-radius:12px}.price-line,.price-total{display:flex;justify-content:space-between;gap:12px;font-size:14px}.price-line+.price-line{margin-top:4px}.price-total{margin-top:8px;padding-top:8px;border-top:1px dashed #d0d5dd;font-size:15px}.price-total strong{color:#173b57;font-size:17px}
-.time{font-size:20px;font-weight:800;line-height:1.45;margin:5px 0;min-height:96px}.card ul{margin:8px 0 0;padding-left:19px;margin-top:auto}
-.selected-scheme-status{display:inline-block;margin:-3px 0 14px;padding:7px 10px;border-radius:10px;background:#f2f4f7;color:#475467;font-size:13px}.selected-scheme-status.active{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
-.tabs,.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}.tabs{margin:10px 0 15px}.filters{margin:0 0 12px;flex-wrap:wrap}button{white-space:nowrap;border:1px solid var(--line);background:#fff;padding:9px 12px;border-radius:999px;cursor:pointer;font-size:14px;color:#344054}button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.fare-note{margin:0 0 14px;padding:11px 13px;border-radius:12px;background:#f8fafc;border:1px solid var(--line);color:#475467;font-size:13px}.date-panel{display:none}.date-panel.active{display:block}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:12px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}th{font-size:13px;color:#475467;background:#f8fafc}tr:last-child td{border-bottom:0}.airline{font-weight:800}.flight{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800}.badge{display:inline-block;border-radius:999px;padding:3px 7px;font-size:12px;font-weight:750}.badge.fsc{background:#eef4ff;color:var(--fsc)}.badge.lcc{background:#fff7ed;color:var(--lcc)}.badge.airport{background:#f2f4f7;color:#344054}.fare{font-weight:800;color:#344054;white-space:nowrap}.best{color:var(--green);font-weight:800}.warn{color:var(--orange);font-weight:750}
-tr.scheme-highlight td{background:#fff7cc!important;box-shadow:inset 0 1px 0 #f4c430,inset 0 -1px 0 #f4c430}tr.scheme-highlight td:first-child{box-shadow:inset 4px 0 0 #f4c430,inset 0 1px 0 #f4c430,inset 0 -1px 0 #f4c430}.sources{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}.sources li{margin:8px 0}.small{font-size:13px;color:var(--muted)}.footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:25px}
-@media(max-width:760px){.container{padding:12px 10px 36px}.hero{padding:22px 18px;border-radius:18px}.cards{grid-template-columns:1fr}.time{min-height:auto}h2{font-size:21px}}
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="flights.css">
+</head>
+<body>
+<header class="site-nav"><div class="site-nav-inner">
+<a class="site-brand" href="index.html" aria-label="釜山家族旅行首頁"><strong>BUSAN NOTE.</strong><small>FAMILY TRAVEL · NOV 2026</small></a>
+<nav class="site-links" aria-label="網站分頁">
+<a href="index.html">首頁</a><a href="tickets.html">機票資訊</a><a href="stays.html">住宿資訊</a><a href="itinerary.html">行程規劃</a><a href="ledger.html">收支紀錄</a><a href="todo.html">待辦事項</a><a href="flights.html" aria-current="page">航班選擇</a>
+</nav></div></header>
+<main class="site-container flight-main">
+<section class="page-head">
+<span class="kicker">07 / FLIGHT COMPARISON</span>
+<h1>航班選擇</h1>
+<p>一趟釜山家族旅行，從不同出發城市與時間裡，慢慢挑出最適合大家的路線。這裡保留規劃階段的航班與方案比較；目前已選定的去回程航班，請以「機票資訊」頁為準。</p>
+<div class="flight-intro-meta" aria-label="歷史航班比較範圍">
+<span>7 位旅伴 · 4 位長輩＋3 位年輕人</span>
+<span>11 / 14–15 去程</span>
+<span>11 / 19–20 回程</span>
+<span>2026 / 09 / 22 查核資料</span>
+</div>
+</section>
+<div class="flight-context" role="note"><p><strong>旅行備忘：</strong>以下是規劃時整理的歷史航班與預估票價，並非目前的實際購票金額；網站已另列出七人確定採用的去回程組合。</p><a href="tickets.html">查看機票資訊 →</a></div>
 
-/* === Korean travel magazine visual === */
-:root{
-  --bg:#f6f2ec;--card:#fffdfa;--ink:#202b33;--muted:#756b63;--line:#e8ddd1;
-  --navy:#244056;--blue:#5f8098;--green:#657164;--orange:#bf7b53;
-  --fsc-bg:#edf3f7;--fsc:#355c78;--lcc-bg:#fcf0e5;--lcc:#b6693e;
-}
-body{
-  background:linear-gradient(180deg,#fbf7f2 0%,#f6efe7 42%,#f3eee8 100%);
-  color:var(--ink);
-}
-.container{padding-top:26px}
-.hero{
-  position:relative;overflow:hidden;min-height:400px;border-radius:28px;
-  padding:34px 34px 144px;color:#fff;
-  background-image:
-    linear-gradient(180deg,rgba(18,31,42,.18) 0%,rgba(18,31,42,.10) 20%,rgba(18,31,42,.34) 52%,rgba(18,31,42,.80) 100%),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Haeundae_District_and_Beach.jpg/1280px-Haeundae_District_and_Beach.jpg');
-  background-size:cover;background-position:center center;
-  box-shadow:0 22px 48px rgba(64,71,74,.14);
-}
-.hero:before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(25,35,42,.58) 0%,rgba(25,35,42,.42) 34%,rgba(25,35,42,.18) 62%,rgba(25,35,42,.08) 100%);
-  pointer-events:none;
-}
-.hero:after{
-  content:"";position:absolute;inset:auto 0 0 0;height:180px;
-  background:linear-gradient(180deg,rgba(22,33,40,0) 0%,rgba(22,33,40,.70) 100%);
-  pointer-events:none;
-}
-.hero h1,.hero p,.hero .hero-pills,.hero .hero-credit{position:relative;z-index:2;max-width:680px}
-.hero h1{font-size:clamp(31px,4.5vw,46px);letter-spacing:.01em;line-height:1.15;margin-bottom:14px;text-shadow:0 1px 2px rgba(0,0,0,.18)}
-.hero p{color:#f7f3ef;max-width:560px}
-.hero p:nth-of-type(1){display:inline-block;margin-bottom:8px;padding-top:10px;border-top:1px solid rgba(255,255,255,.34)}
-.hero-pills{margin-top:18px;gap:10px}
-.hero-pill{background:rgba(255,251,247,.12);border:1px solid rgba(255,248,243,.18);color:#fffaf5;backdrop-filter:blur(10px)}
-.hero-credit{position:absolute;right:20px;bottom:14px;max-width:none;font-size:11px;color:rgba(255,248,242,.74);letter-spacing:.02em;text-align:right}
-h2{position:relative;color:#223c4e;letter-spacing:.01em;margin-top:34px;margin-bottom:14px;padding-bottom:10px}
-h2:after{content:"";position:absolute;left:0;bottom:0;width:56px;height:2px;background:linear-gradient(90deg,#9b6d4f,#d5b496);border-radius:999px}
-.scheme-hint,.selected-scheme-status,.fare-note,.sources .small{color:#6b625c}
-.cards{gap:16px}
-.card{
-  background:linear-gradient(180deg,rgba(255,253,249,.98) 0%,rgba(255,251,247,.98) 100%);
-  border:1px solid #ebdfd2;border-radius:22px;box-shadow:0 14px 28px rgba(96,87,79,.07)
-}
-.card:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(96,87,79,.11)}
-.card.selected{border:2px solid #7090a5;background:linear-gradient(180deg,#fffefc 0%,#f3f7f8 100%)}
-.card.selected:after{background:#7090a5;letter-spacing:.03em}
-.card h3{font-size:19px;line-height:1.35}
-.route{color:#85776d;font-size:14px;letter-spacing:.01em}
-.scheme-price{background:#fbf5ee;border-color:#ede1d3;border-radius:14px}
-.price-total strong{color:#2e5168}
-.time{font-size:21px;line-height:1.5;color:#263844}
-.tag{border-radius:999px;font-weight:800;letter-spacing:.03em}
-.tag.green{background:#edf3ee;color:#5f7064}.tag.blue{background:#edf3f6;color:#48667c}.tag.orange{background:#f9ecdf;color:#ae6a40}
-.tabs,.filters{gap:10px}
-button{background:rgba(255,251,247,.95);border-color:#eadfcf;color:#625b54;box-shadow:0 2px 7px rgba(91,82,75,.04)}
-button.active{background:#4c6b80;border-color:#4c6b80;color:#fff}
-.selected-scheme-status{background:#fbf3eb;border:1px solid #ebddce}
-.selected-scheme-status.active{background:#eef4f7;border-color:#cfdee7;color:#416276}
-.table-wrap,.sources{background:rgba(255,252,248,.98);border-color:#eadfcf;box-shadow:0 10px 24px rgba(104,95,87,.045);border-radius:18px}
-th{background:#f6eee6;color:#62554a}
-.badge.airport{background:#f4ede4;color:#6b5d54}.badge.fsc{background:#edf4f7;color:#48667c}.badge.lcc{background:#fbefe4;color:#af6a40}
-.fare-note{background:#fbf5ee;border-color:#eddfd1}
-tr.scheme-highlight td{background:#fff3dc!important;box-shadow:inset 0 1px 0 #d9a76a,inset 0 -1px 0 #d9a76a}
-tr.scheme-highlight td:first-child{box-shadow:inset 4px 0 0 #d9a76a,inset 0 1px 0 #d9a76a,inset 0 -1px 0 #d9a76a}
-.footer{color:#988b80}
-@media(max-width:900px){.cards{grid-template-columns:1fr}}
-@media(max-width:760px){
-  .container{padding:12px 10px 36px}
-  .hero{min-height:360px;padding:22px 18px 122px;border-radius:20px;background-position:58% center}
-  .hero:before{background:linear-gradient(180deg,rgba(25,35,42,.34) 0%,rgba(25,35,42,.30) 28%,rgba(25,35,42,.66) 100%)}
-  .hero h1{font-size:30px}.hero p:nth-of-type(1){padding-top:8px}
-  .hero-credit{left:18px;right:18px;text-align:left;bottom:10px;font-size:10px}
-  .time{min-height:auto}h2{font-size:21px}
-}
-/* === end Korean travel magazine visual === */
-
-
-.hero-credit{display:none!important}
-</style>
-<link rel="stylesheet" href="site.css"></head>
-<body class="flight-page"><header class="site-nav"><div class="site-nav-inner"><a class="site-brand" href="index.html" aria-label="釜山家族旅行首頁"><strong>BUSAN NOTE.</strong><small>FAMILY TRAVEL · NOV 2026</small></a><nav class="site-links" aria-label="網站分頁"><a href="index.html">首頁</a><a href="tickets.html">機票資訊</a><a href="stays.html">住宿資訊</a><a href="itinerary.html">行程規劃</a><a href="flights.html" aria-current="page">航班選擇</a><a href="ledger.html">收支紀錄</a><a href="todo.html">待辦事項</a></nav></div></header><div class="container">
-<section class="hero"><h1>2026 釜山家族旅行｜航班選擇</h1><p>4 位長輩＋3 位年輕人，共 7 位</p><p>比較航空：中華航空、長榮航空、星宇航空、台灣虎航、濟州航空、釜山航空</p><div class="hero-pills"><span class="hero-pill">去程：11/14（六）或 11/15（日）</span><span class="hero-pill">回程：11/19（四）或 11/20（五）</span><span class="hero-pill">機場：高雄／台中／桃園</span><span class="hero-pill">班表查核：2026/09/22</span></div></section>
-
-<h2>航班方案比較</h2><div class="scheme-hint">點選任一方案，可在下方完整航班表自動標示該方案使用的航班。</div>
+<section class="flight-section" aria-labelledby="schemeTitle">
+<div class="flight-section-heading">
+<div class="section-overline">01 / ROUTE IDEAS</div>
+<h2 class="section-title" id="schemeTitle">航班方案比較</h2>
+<p class="section-desc">保留最初討論的三種方案。點選任一方案，下方的完整航班表就會標示對應航班；此處的費用皆為當時的估算。</p>
+</div>
 <div class="cards">
 <div class="card" data-scheme="A" data-flights="out15:BX586,back19:7C6255" tabindex="0"><span class="tag green">交通方便</span><h3>方案 A｜11/15–11/19，小港去回</h3><div class="route">去程 BX586｜回程 7C6255</div><div class="scheme-price"><div class="price-line"><span>機票</span><strong>約 NT$12,000</strong></div><div class="price-line"><span>車資</span><strong>約 NT$300</strong></div><div class="price-total"><span>預估總額</span><strong>約 NT$12,300</strong></div></div><div class="time">BX586　15:00 → 18:25<br>7C6255　14:05 → 16:05</div><ul><li><strong>優點：</strong>交通方便，票價較低。</li><li><strong>缺點：</strong>時間不好，幾乎去頭去尾。</li></ul></div>
 <div class="card" data-scheme="B" data-flights="out15:JX310,out15:CI188,back19:BR163" tabindex="0"><span class="tag blue">時間較好</span><h3>方案 B｜11/15–11/19，台中／桃園去回</h3><div class="route">去程 JX310、CI188｜回程 BR163</div><div class="scheme-price"><div class="price-line"><span>機票</span><strong>約 NT$17,000</strong></div><div class="price-line"><span>車資</span><strong>約 NT$2,000</strong></div><div class="price-total"><span>預估總額</span><strong>約 NT$19,000</strong></div></div><div class="time">JX310　08:10 → 11:30<br>CI188　07:40 → 10:50<br>BR163　18:55 → 20:25</div><ul><li><strong>優點：</strong>時間較好。</li><li><strong>缺點：</strong>要搭高鐵，票價較高。</li></ul></div>
 <div class="card" data-scheme="C" data-flights="out15:7C6164,back19:IT607" tabindex="0"><span class="tag orange">時間最大化</span><h3>方案 C｜11/15–11/19，桃園去回</h3><div class="route">去程 7C6164｜回程 IT607</div><div class="scheme-price"><div class="price-line"><span>機票</span><strong>約 NT$10,000</strong></div><div class="price-line"><span>車資</span><strong>約 NT$3,000</strong></div><div class="price-total"><span>預估總額</span><strong>約 NT$13,000</strong></div></div><div class="time">7C6164　02:50 → 06:10<br>IT607　21:00 → 22:30</div><ul><li><strong>優點：</strong>時間最大化，票價便宜。</li><li><strong>缺點：</strong>紅眼航班，需要體力。</li></ul></div>
 </div>
+</section>
 
-<h2 id="flightTableTitle">完整航班表</h2><div id="selectedSchemeStatus" class="selected-scheme-status">尚未選擇方案</div>
-<div class="tabs"><button class="tab active" data-panel="out14">11/14 去程</button><button class="tab" data-panel="out15">11/15 去程</button><button class="tab" data-panel="back19">11/19 回程</button><button class="tab" data-panel="back20">11/20 回程</button></div>
-<div class="filters"><button class="airport-filter active" data-airport="ALL">全部機場</button><button class="airport-filter" data-airport="KHH">高雄 KHH</button><button class="airport-filter" data-airport="RMQ">台中 RMQ</button><button class="airport-filter" data-airport="TPE">桃園 TPE</button><button class="type-filter active" data-type="ALL">全部航空</button><button class="type-filter" data-type="FSC">傳統航空</button><button class="type-filter" data-type="LCC">廉航</button></div>
-<div class="fare-note">票價為預估單程／每人新台幣區間，供方案比較使用。廉航多為基本票價帶，托運行李、選位等可能另計；實際售價依訂位當下與剩餘機位為準。</div>
-<div id="tables"></div>
-
-<h2>資料來源與班表說明</h2><div class="sources"><p><b>這是航班時刻比較頁，不是即時票價頁。</b> 航空公司仍可能調整班號、時間、機型或飛航日；真正開票時請再以航空公司訂位系統為準。</p><ul><li>中華航空、長榮、星宇、虎航：依 2026 冬季公開班表與日期型商品交叉核對。</li><li>濟州航空：桃園 7C6164、7C6152、7C6151、7C6163；高雄 7C6256 / 7C6255。</li><li>釜山航空：桃園 BX572 / BX576 / BX571 / BX575；高雄 BX586 / BX585。</li></ul><p class="small">11/19 星宇 JX311 已在部分日期型商品中出現，但與較早常態飛航日公告不完全一致，散客訂位時請再確認是否可售。</p><p class="small">票價區間為估算，用於比較不同航班成本，不代表即時報價。</p></div>
-<p class="small">首圖照片來源：Masterhatch / Wikimedia Commons（Haeundae District and Beach）, CC BY-SA 4.0。</p>
-<div class="footer">2026 釜山家族旅行航班比較｜家庭討論用</div>
+<section class="flight-section flight-table-top" aria-labelledby="flightTableTitle">
+<div class="flight-section-heading">
+<div class="section-overline">02 / FLIGHT SCHEDULE</div>
+<h2 class="section-title" id="flightTableTitle">完整航班表</h2>
+<p class="section-desc">依日期切換，並按機場與航空類型篩選。表中時間分別採出發地與抵達地當地時間（韓國比台灣快一小時）。</p>
 </div>
+<div id="selectedSchemeStatus" class="selected-scheme-status" role="status" aria-live="polite">尚未選擇方案 · 可點選上方方案自動標示航班</div>
+<div class="tabs" role="group" aria-label="航班日期">
+<button class="tab" data-panel="out14" type="button">11/14 去程</button>
+<button class="tab active" data-panel="out15" type="button">11/15 去程</button>
+<button class="tab" data-panel="back19" type="button">11/19 回程</button>
+<button class="tab" data-panel="back20" type="button">11/20 回程</button>
+</div>
+<div class="filters" role="group" aria-label="航班篩選">
+<button class="airport-filter active" data-airport="ALL" type="button">全部機場</button>
+<button class="airport-filter" data-airport="KHH" type="button">高雄 KHH</button>
+<button class="airport-filter" data-airport="RMQ" type="button">台中 RMQ</button>
+<button class="airport-filter" data-airport="TPE" type="button">桃園 TPE</button>
+<button class="type-filter active" data-type="ALL" type="button">全部航空</button>
+<button class="type-filter" data-type="FSC" type="button">傳統航空</button>
+<button class="type-filter" data-type="LCC" type="button">廉航</button>
+</div>
+<div class="fare-note">票價均為當時預估的每人單程新台幣區間，僅供歷史方案比較；廉航最低價可能不含托運行李與選位。實際價格與可售航班請以航空公司訂位網站為準。</div>
+<div id="tables"></div>
+</section>
+
+<section class="flight-section" aria-labelledby="sourcesTitle">
+<div class="flight-section-heading"><div class="section-overline">03 / NOTES & SOURCES</div><h2 class="section-title" id="sourcesTitle">資料來源與班表說明</h2></div>
+<div class="sources"><p><b>這是航班時刻比較頁，不是即時票價頁。</b> 航空公司仍可能調整班號、時間、機型或飛航日；真正開票時請再以航空公司訂位系統為準。</p><ul><li>中華航空、長榮、星宇、虎航：依 2026 冬季公開班表與日期型商品交叉核對。</li><li>濟州航空：桃園 7C6164、7C6152、7C6151、7C6163；高雄 7C6256 / 7C6255。</li><li>釜山航空：桃園 BX572 / BX576 / BX571 / BX575；高雄 BX586 / BX585。</li></ul><p class="small">11/19 星宇 JX311 已在部分日期型商品中出現，但與較早常態飛航日公告不完全一致，散客訂位時請再確認是否可售。</p><p class="small">票價區間為估算，用於比較不同航班成本，不代表即時報價。</p></div>
+<p class="archive-note">本頁保留規劃初期資料，不會因後續實際訂票而任意改動原本的預估票價。</p>
+</section>
+</main>
+<footer class="site-footer"><span>BUSAN NOTE. · 2026 釜山家族旅行</span><span>航班比較資料查核日期：2026 / 09 / 22</span></footer>
 <script>
 const D={
 out14:[
@@ -131,12 +84,13 @@ back19:[
 back20:[
 ["TPE","LCC","7C6151","濟州航空","廉航","桃園","09:35","11:15","約 NT$2,500–5,000","每日"],["TPE","LCC","BX571","釜山航空","廉航","桃園","10:50","12:25","約 NT$2,500–5,000","每日"],["TPE","FSC","CI189","中華航空","傳統","桃園","11:50","13:30","約 NT$4,500–7,000","每日"],["KHH","LCC","BX585","釜山航空","廉航","高雄","12:00","14:00","約 NT$2,800–5,000","每日"],["RMQ","FSC","JX311","星宇航空","傳統","台中","12:30","14:00","約 NT$4,500–6,500","週五常態班"],["TPE","FSC","JX901","星宇航空","傳統","桃園","12:30","14:15","約 NT$5,000–7,000","2026 冬季週五時段"],["KHH","LCC","7C6255","濟州航空","廉航","高雄","14:05","16:05","約 NT$3,500–5,500","回小港首選"],["TPE","LCC","BX575","釜山航空","廉航","桃園","15:00","16:40","約 NT$2,500–5,000","每日"],["TPE","FSC","BR163","長榮航空","傳統","桃園","18:55","20:25","約 NT$6,000–8,000","可保留大半天行程"],["TPE","FSC","CI187","中華航空","傳統","桃園","19:50","21:30","約 NT$4,500–7,000","每日"],["TPE","LCC","IT607","台灣虎航","廉航","桃園","20:50","22:30","約 NT$2,800–5,000","想玩到晚上的廉航選擇"],["TPE","LCC","7C6163","濟州航空","廉航","桃園","22:00","23:50","約 NT$2,500–5,000","抵達時間較晚"]]};
 const panels={out14:["11/14 去程","出發機場","台灣起飛","釜山抵達"],out15:["11/15 去程","出發機場","台灣起飛","釜山抵達"],back19:["11/19 回程","抵達機場","釜山起飛","台灣抵達"],back20:["11/20 回程","抵達機場","釜山起飛","台灣抵達"]};
-let airport="ALL",type="ALL",active="out14";
+let airport="ALL",type="ALL",active="out15";
 function render(){const root=document.getElementById("tables");root.innerHTML="";Object.entries(panels).forEach(([id,p])=>{const s=document.createElement("section");s.id=id;s.className="date-panel"+(id===active?" active":"");let rows=D[id].map(r=>`<tr data-airport="${r[0]}" data-type="${r[1]}" data-flight="${r[2]}"><td class="airline">${r[3]}</td><td><span class="badge ${r[1]==="LCC"?"lcc":"fsc"}">${r[4]}</span></td><td><span class="badge airport">${r[5]}</span></td><td class="flight">${r[2]}</td><td>${r[6]}</td><td>${r[7]}</td><td class="fare">${r[8]}</td><td>${r[9]}</td></tr>`).join("");s.innerHTML=`<div class="table-wrap"><table><thead><tr><th>航空</th><th>類型</th><th>${p[1]}</th><th>航班</th><th>${p[2]}</th><th>${p[3]}</th><th>預估票價</th><th>備註</th></tr></thead><tbody>${rows}</tbody></table></div>`;root.appendChild(s)});filterRows();applyExistingHighlights()}
 function filterRows(){document.querySelectorAll(".date-panel.active tbody tr").forEach(r=>{r.style.display=((airport==="ALL"||r.dataset.airport===airport)&&(type==="ALL"||r.dataset.type===type))?"":"none"})}
 function activateTab(id){active=id;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.panel===id));document.querySelectorAll(".date-panel").forEach(s=>s.classList.toggle("active",s.id===id));filterRows()}
 let selectedPairs=[];function applyExistingHighlights(){selectedPairs.forEach(x=>{const [p,f]=x.split(":");document.querySelectorAll(`#${p} tr[data-flight="${f}"]`).forEach(r=>r.classList.add("scheme-highlight"))})}
-function applyScheme(c){document.querySelectorAll(".card").forEach(x=>x.classList.toggle("selected",x===c));selectedPairs=c.dataset.flights.split(",");document.querySelectorAll(".scheme-highlight").forEach(r=>r.classList.remove("scheme-highlight"));applyExistingHighlights();if(selectedPairs.length)activateTab(selectedPairs[0].split(":")[0]);const st=document.getElementById("selectedSchemeStatus");st.textContent="目前選擇："+c.querySelector("h3").textContent+"（黃色標示為此方案航班）";st.classList.add("active");document.getElementById("flightTableTitle")?.scrollIntoView({behavior:"smooth",block:"start"})}
+function applyScheme(c){document.querySelectorAll(".card").forEach(x=>x.classList.toggle("selected",x===c));selectedPairs=c.dataset.flights.split(",");airport="ALL";type="ALL";document.querySelectorAll(".airport-filter,.type-filter").forEach(b=>b.classList.toggle("active",b.dataset.airport==="ALL"||b.dataset.type==="ALL"));document.querySelectorAll(".scheme-highlight").forEach(r=>r.classList.remove("scheme-highlight"));applyExistingHighlights();if(selectedPairs.length)activateTab(selectedPairs[0].split(":")[0]);const st=document.getElementById("selectedSchemeStatus");st.textContent="目前選擇："+c.querySelector("h3").textContent+"（黃色標示為此方案航班）";st.classList.add("active");document.getElementById("flightTableTitle")?.scrollIntoView({behavior:"smooth",block:"start"})}
 render();document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>activateTab(b.dataset.panel));document.querySelectorAll(".airport-filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".airport-filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");airport=b.dataset.airport;filterRows()});document.querySelectorAll(".type-filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".type-filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");type=b.dataset.type;filterRows()});document.querySelectorAll(".card").forEach(c=>{c.onclick=()=>applyScheme(c);c.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();applyScheme(c)}}});
-</script></body></html>
-<!-- Pages redeploy trigger 2026-09-22 -->
+</script>
+</body>
+</html>

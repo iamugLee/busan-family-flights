@@ -1,0 +1,108 @@
+/* Flight comparisons — BUSAN NOTE. Shared editorial look.
+   All selectors are scoped; the site-wide visual identity lives in site.css. */
+.flight-main{padding-bottom:65px}
+.flight-main .page-head{margin:4px 0 30px}
+.flight-main .page-head .kicker{display:block}
+.flight-main .page-head p{max-width:850px}
+.flight-intro-meta{display:flex;gap:8px 10px;flex-wrap:wrap;margin-top:21px;position:relative;z-index:1}
+.flight-intro-meta span{display:inline-flex;align-items:center;background:rgba(255,253,249,.70);border:1px solid #daccbf;padding:6px 12px;font-size:12px;font-weight:650;color:#735e4e}
+.flight-main .flight-context{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin:23px 0 0;padding:15px 20px;background:#fffefa;border:1px solid #e6dacd;border-left:3px solid #a9775b}
+.flight-context p{margin:0;font-size:13px;color:#695f58;line-height:1.8}
+.flight-context a{font-size:13px;color:#31586c;text-decoration:underline;text-underline-offset:3px;font-weight:750}
+.flight-section{margin-top:39px}
+.flight-section-heading{margin-bottom:18px}
+.flight-section-heading .section-title{margin-bottom:8px}
+.flight-section-heading .section-desc{margin:0;max-width:900px}
+.flight-main .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.flight-main .card{display:flex;flex-direction:column;position:relative;background:#fffdf9;border:1px solid #e4d8ca;border-top:3px solid #c4aa8f;padding:22px 20px 19px;cursor:pointer;transition:border-color .16s,box-shadow .16s,transform .16s;box-shadow:0 8px 18px rgba(74,64,55,.035);min-width:0}
+.flight-main .card:hover{border-color:#9eb0b5;box-shadow:0 12px 26px rgba(48,69,78,.08);transform:translateY(-2px)}
+.flight-main .card:focus-visible,.flight-main button:focus-visible{outline:3px solid #7ca0b3;outline-offset:3px}
+.flight-main .card.selected{border-color:#46677a;border-top:3px solid #46677a;background:#f8fbfa;box-shadow:0 11px 25px rgba(48,79,90,.10)}
+.flight-main .card.selected:after{content:"已選擇";position:absolute;right:15px;top:17px;background:#e1eaf0;color:#35546a;font-size:11px;font-weight:750;padding:4px 9px}
+.flight-main .tag{display:inline-block;width:max-content;margin:0 0 13px;font-size:11px;letter-spacing:.08em;font-weight:750;padding:4px 10px;background:#f3e9de;color:#936d4f}
+.flight-main .tag.green{background:#e9f0eb;color:#557365}
+.flight-main .tag.blue{background:#e7edf1;color:#486c83}
+.flight-main .tag.orange{background:#f4e8dc;color:#a4764f}
+.flight-main .card h3{font-size:19px;font-weight:650;line-height:1.5;color:#2e4a5c;margin:0 0 6px;padding-right:10px}
+.flight-main .card .route{font-size:12px;color:#8b786b;letter-spacing:.015em;margin:0 0 12px}
+.flight-main .scheme-price{border-top:1px solid #e7dcd1;border-bottom:1px solid #e7dcd1;padding:13px 0;margin:0 0 13px}
+.flight-main .price-line,.flight-main .price-total{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-size:13px;color:#6d675f}
+.flight-main .price-line+.price-line{margin-top:6px}
+.flight-main .price-line strong{font-size:13px;color:#344a57;font-weight:700;white-space:nowrap}
+.flight-main .price-total{margin-top:10px;padding-top:9px;border-top:1px dashed #dbccbd}
+.flight-main .price-total strong{color:#2d5165;font-size:21px;font-weight:750;letter-spacing:-.03em;white-space:nowrap}
+.flight-main .time{font-size:15px;line-height:1.95;font-weight:700;color:#304c5b;background:#f2efe9;padding:11px 13px;margin:0 0 15px}
+.flight-main .card ul{margin:auto 0 0;padding-left:19px;font-size:13px;line-height:1.85;color:#6d645d}
+.flight-main .card ul li+li{margin-top:4px}
+.flight-table-top{margin-top:43px}
+.flight-main .selected-scheme-status{display:inline-flex;max-width:100%;padding:8px 13px;font-size:12px;line-height:1.7;color:#70685f;border:1px solid #e2d8cd;background:#f1ebe3;margin:4px 0 14px}
+.flight-main .selected-scheme-status.active{background:#eaf1f3;color:#365b70;border-color:#c8d8df;font-weight:650}
+.flight-main .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 15px}
+.flight-main .filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 15px}
+.flight-main button{appearance:none;font:650 13px/1.5 -apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;white-space:nowrap;border:1px solid #e0d3c5;color:#605950;background:#fffdf9;padding:8px 13px;cursor:pointer;transition:background .15s,border .15s,color .15s}
+.flight-main button:hover{border-color:#7c9aaa;color:#315268}
+.flight-main button.active{background:#304d60;color:#fff;border-color:#304d60}
+.flight-main .tabs button{padding:11px 16px;font-size:13px;letter-spacing:.03em}
+.flight-main .tabs button.active{box-shadow:inset 0 -2px 0 #d1a686}
+.flight-main .filters:before{content:"篩選";align-self:center;margin-right:4px;color:#98775e;font-size:11px;font-weight:800;letter-spacing:.12em}
+.flight-main .filters .type-filter[data-type="ALL"]{margin-left:12px}
+.flight-main .fare-note{background:#f0e9df;border-left:3px solid #b18b70;color:#6c6259;padding:13px 16px;font-size:12px;line-height:1.9;margin:14px 0 18px}
+.flight-main .date-panel{display:none}
+.flight-main .date-panel.active{display:block}
+.flight-main .table-wrap{width:100%;overflow-x:auto;overscroll-behavior-x:contain;border:1px solid #e4d9ce;background:#fffefa}
+.flight-main table{width:100%;border-collapse:collapse;min-width:925px;font-size:13px;line-height:1.6}
+.flight-main th,.flight-main td{text-align:left;vertical-align:middle;padding:12px 11px;border-bottom:1px solid #ece2d8}
+.flight-main th{font-size:12px;color:#796959;background:#f1ebe3;white-space:nowrap;font-weight:750}
+.flight-main tr:last-child td{border-bottom:0}
+.flight-main tbody tr:nth-child(even) td{background:#fdfaf5}
+.flight-main tbody tr:hover td{background:#f1f5f5}
+.flight-main .airline{font-weight:700;color:#324d5d;white-space:nowrap}
+.flight-main .flight{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:750;color:#304e63;white-space:nowrap}
+.flight-main .fare{white-space:nowrap;font-weight:700;color:#34566b}
+.flight-main .badge{display:inline-block;padding:3px 8px;font-size:11px;white-space:nowrap;font-weight:700}
+.flight-main .badge.fsc{background:#e9f0f3;color:#47697e}
+.flight-main .badge.lcc{background:#f5eadd;color:#a16a42}
+.flight-main .badge.airport{background:#f1eee8;color:#746658}
+.flight-main tr.scheme-highlight td,.flight-main tbody tr.scheme-highlight:nth-child(even) td{background:#f6eee1!important;box-shadow:inset 0 1px 0 #d2b79a,inset 0 -1px 0 #d2b79a}
+.flight-main tr.scheme-highlight td:first-child{box-shadow:inset 4px 0 0 #8b6b52,inset 0 1px 0 #d2b79a,inset 0 -1px 0 #d2b79a}
+.flight-main .sources{background:#fffefa;border:1px solid #e6dacd;padding:24px 27px;color:#695f57;font-size:13px;line-height:1.95}
+.flight-main .sources p{margin:0 0 10px}
+.flight-main .sources ul{padding-left:21px;margin:10px 0}
+.flight-main .sources li+li{margin-top:6px}
+.flight-main .sources .small{font-size:12px;color:#8a7b6e}
+.flight-main .archive-note{font-size:12px;color:#92745f;margin:18px 0 0}
+.flight-main #flightTableTitle{scroll-margin-top:108px}
+@media(max-width:980px){.flight-main .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+ .flight-main .page-head{margin-bottom:18px}
+ .flight-main .cards{grid-template-columns:1fr}
+ .flight-main .card{padding:19px 18px}
+ .flight-main .flight-context{padding:12px 15px}
+ .flight-main .flight-section{margin-top:31px}
+ .flight-main .tabs button{flex:1 1 calc(50% - 8px);padding:11px 8px}
+ .flight-main .filters:before{flex:0 0 100%;margin-bottom:0}
+ .flight-main .filters .type-filter[data-type="ALL"]{margin-left:0}
+ .flight-main .table-wrap{overflow:visible;border:0;background:none}
+ .flight-main table{display:block;min-width:0;width:100%}
+ .flight-main thead{display:none}
+ .flight-main tbody{display:grid;gap:10px}
+ .flight-main tbody tr{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;padding:14px 16px;background:#fffefa;border:1px solid #e5dacf}
+ .flight-main tbody td,.flight-main tbody tr:nth-child(even) td{display:block;min-width:0;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;font-size:12px}
+ .flight-main tbody td:before{display:block;font-size:10px;font-weight:700;color:#9e8774;letter-spacing:.04em;margin-bottom:2px}
+ .flight-main tbody td:nth-child(1){grid-column:1}
+ .flight-main tbody td:nth-child(1):before{content:"航空"}
+ .flight-main tbody td:nth-child(2){grid-column:2;justify-self:end}
+ .flight-main tbody td:nth-child(2):before{content:"類型"}
+ .flight-main tbody td:nth-child(3):before{content:"機場"}
+ .flight-main tbody td:nth-child(4):before{content:"航班"}
+ .flight-main tbody td:nth-child(5):before{content:"起飛"}
+ .flight-main tbody td:nth-child(6):before{content:"抵達"}
+ .flight-main tbody td:nth-child(7){grid-column:1/-1;padding-top:9px;border-top:1px solid #e8dccc!important}
+ .flight-main tbody td:nth-child(7):before{content:"預估單程票價"}
+ .flight-main tbody td:nth-child(8){grid-column:1/-1;color:#7f7368}
+ .flight-main tbody td:nth-child(8):before{content:"班表備註"}
+ .flight-main tbody tr.scheme-highlight{border:2px solid #b18f6f;background:#faf5ed!important}
+ .flight-main tbody tr.scheme-highlight td{box-shadow:none!important}
+ .flight-main .sources{padding:20px 17px}
+}
+@media(prefers-reduced-motion:reduce){.flight-main .card{transition:none}.flight-main .card:hover{transform:none}}

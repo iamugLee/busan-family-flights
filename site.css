@@ -173,3 +173,7 @@ a{color:inherit}
 .stay-gallery-view:focus-visible{outline:3px solid #ab775a;outline-offset:-3px}
 @media(max-width:900px){.stay-summary,.stay-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.stay-meta div:nth-child(2){border-right:0}.stay-meta div:nth-child(-n+2){border-bottom:1px solid #e5dacc}}
 @media(max-width:620px){.stay-summary,.stay-places{grid-template-columns:1fr}.stay-entry-head{display:block}.stay-price{text-align:left;margin-top:17px}.stay-gallery-item{aspect-ratio:4/3}.stay-meta div{padding:12px 14px}.stay-gallery-item figcaption{padding:40px 15px 13px;font-size:12px}.stay-gallery-controls{right:12px;bottom:12px}.stay-gallery-headnote{font-size:11px;left:11px;top:11px}}
+
+/* Navigation contract: keep the historical flight-comparison link at the end,
+   even when later pages are appended to an existing menu. */
+.site-links>a[href="flights.html"]{order:999}
