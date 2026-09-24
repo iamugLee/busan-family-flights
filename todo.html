@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BUSAN NOTE. 釜山家族旅行共用待辦清單：七人新增、指派負責人、標記重要性及勾選完成。">
+<title>待辦事項｜2026 釜山家族旅行</title>
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="todo.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script defer src="todo.js"></script>
+</head>
+<body>
+<header class="site-nav"><div class="site-nav-inner">
+<a class="site-brand" href="index.html" aria-label="釜山家族旅行首頁"><strong>BUSAN NOTE.</strong><small>FAMILY TRAVEL · NOV 2026</small></a>
+<nav class="site-links" aria-label="網站分頁"><a href="index.html">首頁</a><a href="tickets.html">機票資訊</a><a href="stays.html">住宿資訊</a><a href="itinerary.html">行程規劃</a><a href="flights.html">航班選擇</a><a href="ledger.html">收支紀錄</a><a href="todo.html" aria-current="page">待辦事項</a></nav>
+</div></header>
+<main class="site-container todo-main">
+<section class="todo-hero">
+  <div class="todo-hero-copy">
+    <div class="kicker">07 / TO-DO LIST</div>
+    <h1>出發前，<br><em>把小事安排好。</em></h1>
+    <p>七位旅伴的共同待辦清單。誰負責、哪些事情重要、還差幾件待完成，一起整理在這裡。</p>
+    <div class="todo-hero-actions"><button type="button" id="add-task-hero" class="todo-primary" disabled>＋ 新增待辦事項</button><a class="todo-ghost" href="itinerary.html">查看行程規劃 ↗</a></div>
+  </div>
+  <div class="todo-hero-art" aria-hidden="true"><div class="todo-art-stamp">BUSAN<br><span>2026 · NOV</span></div><div class="todo-art-line"></div><div class="todo-art-card"><div>PRE-TRIP CHECKLIST</div><span>01 — PACK THE MEMORIES</span><span>02 — GET READY TO GO</span><span>03 — SEE YOU IN BUSAN</span></div><div class="todo-art-caption">釜山，秋末的海。</div></div>
+</section>
+
+<div class="todo-sync" role="status" aria-live="polite"><span id="todo-sync-dot" class="todo-sync-dot"></span><span id="todo-sync-message">正在連接雲端清單…</span><button type="button" id="refresh-tasks" class="todo-inline-link">重新整理 ↻</button></div>
+<div id="todo-alert" class="todo-alert" role="alert" hidden></div>
+
+<section class="todo-overview" aria-label="待辦進度">
+  <div class="todo-stat"><small>ALL TASKS</small><strong id="stat-total">—</strong><span>所有待辦事項</span></div>
+  <div class="todo-stat"><small>TO DO</small><strong id="stat-open">—</strong><span>尚未完成</span></div>
+  <div class="todo-stat"><small>HIGH PRIORITY</small><strong id="stat-high">—</strong><span>重要且未完成</span></div>
+  <div class="todo-stat"><small>COMPLETED</small><strong id="stat-done">—</strong><span>已完成事項</span></div>
+</section>
+<section class="todo-progress-card" aria-label="完成進度"><div class="todo-progress-top"><span>TRIP PREPARATION PROGRESS</span><strong id="progress-text">0%</strong></div><div class="todo-progress-track"><div id="progress-fill"></div></div><p id="progress-description">一起把出發前的事情逐項完成。</p></section>
+
+<section class="todo-workspace">
+  <div class="todo-section-heading"><div><span class="kicker">SHARED CHECKLIST</span><h2>我們的待辦事項</h2></div><button type="button" id="add-task" class="todo-primary" disabled>＋ 新增事項</button></div>
+  <div class="todo-toolbar">
+    <div class="todo-tabs" role="tablist" aria-label="篩選完成狀態">
+      <button type="button" class="active" data-status="open" aria-pressed="true">待完成 <span id="tab-open">0</span></button>
+      <button type="button" data-status="all" aria-pressed="false">全部 <span id="tab-all">0</span></button>
+      <button type="button" data-status="done" aria-pressed="false">已完成 <span id="tab-done">0</span></button>
+    </div>
+    <div class="todo-filters"><label class="todo-filter"><span>負責人</span><select id="filter-assignee"><option value="all">全部成員</option></select></label><label class="todo-filter"><span>重要性</span><select id="filter-priority"><option value="all">全部</option><option value="high">重要</option><option value="normal">一般</option><option value="low">彈性</option></select></label><label class="todo-filter todo-search"><span>搜尋</span><input id="search-tasks" type="search" placeholder="搜尋待辦事項…" autocomplete="off"></label></div>
+  </div>
+  <div id="todo-list" class="todo-list" aria-live="polite"><div class="todo-empty">雲端清單載入中…</div></div>
+  <p class="todo-footnote">此清單與收支紀錄一樣採共用模式：持有網站網址的人都可以新增、修改及勾選事項。請勿記錄密碼、證件號碼等敏感資訊。</p>
+</section>
+</main>
+<div id="task-modal" class="todo-modal" role="dialog" aria-modal="true" aria-labelledby="task-dialog-heading" hidden>
+  <div class="todo-dialog"><div class="todo-dialog-head"><div><span class="kicker">SHARED TO-DO</span><h2 id="task-dialog-heading">新增待辦事項</h2></div><button type="button" id="close-task" class="todo-icon-button" aria-label="關閉視窗">×</button></div>
+  <form id="task-form"><div class="todo-form-body">
+    <label class="todo-field"><span>待辦事項 <b>*</b></span><input type="text" id="task-title" required maxlength="150" placeholder="例如：確認七人托運行李額度" autocomplete="off"></label>
+    <label class="todo-field"><span>詳細說明（選填）</span><textarea id="task-notes" rows="3" maxlength="1000" placeholder="可以補充注意事項、確認方式或相關備註…"></textarea></label>
+    <div class="todo-form-grid"><fieldset class="todo-field todo-fieldset"><legend>重要性</legend><div class="todo-priority-choices"><label><input type="radio" name="task-priority" value="high"><span class="todo-priority-dot high"></span>重要</label><label><input type="radio" name="task-priority" value="normal" checked><span class="todo-priority-dot normal"></span>一般</label><label><input type="radio" name="task-priority" value="low"><span class="todo-priority-dot low"></span>彈性</label></div></fieldset><label class="todo-field"><span>預計完成日（選填）</span><input id="task-due" type="date"></label></div>
+    <fieldset class="todo-field todo-fieldset"><legend>負責人員 <small>可複選，未指派代表大家一起處理</small></legend><div id="task-assignees" class="todo-assignees"></div></fieldset>
+    <label class="todo-field"><span>新增／修改人（選填）</span><select id="task-editor"><option value="">不指定</option></select></label>
+    <label class="todo-done-toggle"><input type="checkbox" id="task-done"><span>這件事情已經完成</span></label>
+    <p id="task-error" class="todo-error" role="alert" hidden></p>
+  </div><div class="todo-dialog-footer"><button id="cancel-task" type="button" class="todo-secondary">取消</button><button id="save-task" type="submit" class="todo-primary">儲存待辦事項</button></div></form></div>
+</div>
+<footer class="site-footer"><span>BUSAN NOTE. · 2026 釜山家族旅行</span><span>供旅伴共同參考，資料隨規劃進度更新。</span></footer>
+</body></html>
