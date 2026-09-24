@@ -1,0 +1,129 @@
+
+/* Busan Family Travel — shared editorial design */
+:root{--paper:#f7f3ed;--cream:#fffdf9;--ink:#26333a;--muted:#736e68;--navy:#2a4556;--copper:#ab775a;--line:#e5dcd0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.8}
+a{color:inherit}
+.site-nav{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.96);border-bottom:1px solid #e5ddd2;backdrop-filter:blur(16px);box-shadow:0 2px 10px rgba(36,44,48,.035)}
+.site-nav-inner{max-width:1200px;min-height:83px;margin:auto;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.site-brand{flex:0 0 auto;text-decoration:none;display:grid;line-height:1.2;gap:2px;letter-spacing:.18em}
+.site-brand strong{font-size:19px;color:#2d4655;font-family:Georgia,"Times New Roman",serif;letter-spacing:.22em;font-weight:600}
+.site-brand small{font-size:10px;color:#9a7966;font-weight:700;letter-spacing:.20em}
+.site-links{display:flex;align-items:center;gap:7px;overflow-x:auto;scrollbar-width:none}
+.site-links::-webkit-scrollbar{display:none}
+.site-links a{text-decoration:none;white-space:nowrap;padding:11px 14px;border-bottom:2px solid transparent;color:#655f58;font-size:14px;font-weight:650;transition:color .2s,border .2s}
+.site-links a:hover{color:#2a4556}
+.site-links a[aria-current="page"]{color:#2a4556;border-color:#b67f60}
+.site-container{max-width:1190px;margin:auto;padding:32px 20px 70px}
+.kicker{font-size:11px;letter-spacing:.22em;color:#a77755;font-weight:800}
+.big-heading{font-family:Georgia,"Noto Serif TC","Songti TC",serif;letter-spacing:.045em;font-size:clamp(32px,4.8vw,60px);line-height:1.25;font-weight:550;margin:12px 0 20px;color:#2a4251}
+.site-lead{font-size:16px;line-height:1.95;color:#615e5a}
+.home-hero{display:grid;grid-template-columns:43% 57%;min-height:490px;background:#fdfaf6;border:1px solid #ede3d9;box-shadow:0 18px 40px rgba(82,73,65,.055);border-radius:6px;overflow:hidden}
+.home-hero-copy{padding:58px 48px 42px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.home-hero-copy .big-heading{margin:17px 0 14px}
+.home-hero-copy .site-lead{max-width:375px}
+.home-eyebrow{border-bottom:1px solid #d0b39e;padding-bottom:12px;min-width:185px}
+.home-hero-image{position:relative;min-height:490px;overflow:hidden;background:linear-gradient(135deg,#9db4bc,#456d82 68%,#304a5b)}
+.home-hero-image img{display:block;width:100%;height:100%;min-height:490px;object-fit:cover;object-position:52% 45%;filter:saturate(.87) contrast(.98)}
+.home-hero-image:after{content:"";position:absolute;inset:65% 0 0;background:linear-gradient(transparent,rgba(22,39,50,.69));pointer-events:none}
+.home-image-caption{position:absolute;z-index:1;bottom:30px;left:33px;color:#fff;font-size:13px;letter-spacing:.12em;text-shadow:0 1px 3px rgba(0,0,0,.24)}
+.home-image-caption small{display:block;font-size:10px;letter-spacing:.23em;color:#efe6da;margin-bottom:4px}
+.trip-ribbon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:18px 0 52px;background:#304a5c;color:#fff;border-radius:4px;overflow:hidden}
+.trip-ribbon div{padding:20px 25px;border-right:1px solid rgba(255,255,255,.13)}
+.trip-ribbon div:last-child{border:0}
+.trip-ribbon small{display:block;font-size:11px;letter-spacing:.16em;color:#c9d8db}
+.trip-ribbon strong{display:block;margin-top:4px;font-size:16px;font-weight:650}
+.article-section{margin:56px 0 0}
+.section-overline{font-size:11px;letter-spacing:.19em;color:#b0815f;font-weight:800;text-transform:uppercase}
+.section-title{font-size:clamp(24px,3vw,34px);font-family:Georgia,"Noto Serif TC","Songti TC",serif;color:#304656;font-weight:600;line-height:1.35;margin:7px 0 17px}
+.section-desc{color:#706962;max-width:760px;font-size:15px;line-height:1.9}
+.divider-rule{height:1px;background:#ddd1c4;margin:40px 0}
+.intro-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:start}
+.intro-quote{margin:0;padding:28px 32px;background:#eee6db;border-left:3px solid #a97b5a;color:#435765;font-family:Georgia,"Noto Serif TC",serif;font-size:21px;line-height:1.8}
+.region-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:25px}
+.region-card{border:1px solid #e8ddd0;background:rgba(255,255,255,.66);padding:23px 26px;min-height:175px;position:relative}
+.region-card .number{font:italic 32px Georgia,serif;color:#cbb39e;float:right;line-height:1}
+.region-card h3{font-size:19px;color:#2c4554;margin:0 0 5px}
+.region-card .en{font-size:11px;letter-spacing:.13em;color:#a2765b;font-weight:750;text-transform:uppercase}
+.region-card p{font-size:14px;color:#655d56;margin:12px 0 0;line-height:1.85}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.soft-panel{background:#fffdf9;border:1px solid #e8ded3;padding:27px 29px;border-radius:3px}
+.soft-panel h3{color:#2e485a;font-size:19px;margin:0 0 12px}
+.soft-panel p{color:#69615a;margin:8px 0;line-height:1.9}
+.soft-panel ul{padding-left:20px;margin:12px 0 0;color:#625c56}
+.soft-panel li+li{margin-top:8px}
+.weather-panel{display:grid;grid-template-columns:1.1fr .9fr;background:#e6ebec;overflow:hidden;margin-top:21px}
+.weather-panel>div{padding:35px 37px}
+.weather-numbers{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid #d1d9d9;gap:0}
+.weather-numbers>div{padding:30px 14px;text-align:center}
+.weather-numbers span{display:block;color:#66757c;font-size:12px;margin-bottom:8px}
+.weather-numbers strong{display:block;font:38px Georgia,serif;color:#2f5267}
+.weather-numbers small{color:#73828b;font-size:11px}
+.note{font-size:13px;color:#857b70;line-height:1.75}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:22px}
+.fact{border-top:2px solid #a68069;background:#fffdf9;padding:20px}
+.fact small{font-size:11px;color:#a4775b;letter-spacing:.13em}
+.fact strong{display:block;color:#2d4958;font-size:19px;margin:8px 0}
+.fact p{font-size:13px;color:#756d66;margin:0;line-height:1.8}
+.notice{padding:18px 22px;border-left:3px solid #a9775b;background:#f1e9df;color:#5e584f;line-height:1.8}
+.btn-link{display:inline-flex;align-items:center;gap:9px;background:#304d60;border:1px solid #304d60;color:white;text-decoration:none;padding:11px 18px;font-size:14px;font-weight:700;transition:background .2s}
+.btn-link:hover{background:#456b82}
+.btn-link.outline{background:transparent;color:#304d60}
+.btn-link.outline:hover{background:#edf0ef}
+.link-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.sources-list{font-size:12px;color:#8a8077;margin:0 0 20px}
+.sources-list a{color:#5c7281;text-decoration:underline;text-underline-offset:3px}
+.site-footer{max-width:1190px;margin:30px auto 0;padding:24px 20px 35px;border-top:1px solid #e0d5c8;font-size:12px;color:#948a80;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.page-head{padding:44px 46px;background:#efe8df;border:1px solid #e6ddd2;position:relative;overflow:hidden}
+.page-head:after{content:"BUSAN 2026";position:absolute;right:28px;bottom:-24px;font:italic 108px Georgia,serif;color:rgba(119,98,79,.075);white-space:nowrap;pointer-events:none}
+.page-head h1{font:normal clamp(30px,4vw,45px) Georgia,"Noto Serif TC",serif;margin:8px 0 14px;color:#2c4759}
+.page-head p{max-width:720px;color:#655e59;line-height:1.9;margin:0}
+.status-chip{display:inline-block;padding:5px 11px;border-radius:100px;background:#f7e6d8;color:#986447;font-size:12px;font-weight:750}
+.status-chip.blue{background:#e7edf1;color:#486c83}
+.info-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:25px 0}
+.info-cell{background:#fffefa;border:1px solid #e6dacd;padding:25px}
+.info-cell small{font-size:12px;color:#a37655;letter-spacing:.1em}
+.info-cell h3{color:#2e4859;font-size:20px;margin:7px 0 11px}
+.info-cell p{margin:6px 0;color:#6b645d;line-height:1.8}
+.day-list{display:grid;gap:12px;margin:26px 0}
+.day{display:grid;grid-template-columns:145px 1fr auto;align-items:center;gap:24px;padding:20px 25px;background:#fffdf9;border:1px solid #e8dcd0}
+.day-number{font:35px Georgia,serif;color:#496478}
+.day-number small{display:block;font:11px -apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif;letter-spacing:.15em;color:#a47a5d;margin-bottom:4px}
+.day-content h3{margin:0 0 5px;font-size:17px;color:#314b5b}
+.day-content p{margin:0;color:#77706a;font-size:14px}
+.day-tag{font-size:12px;white-space:nowrap;color:#a27555;background:#f5ece2;padding:7px 10px;border-radius:999px}
+.flight-page .container{padding-top:25px}
+.flight-page .hero{margin-top:2px}
+.flight-page .site-nav{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}
+.flight-page .site-nav strong{font-weight:600}
+.flight-page #flightTableTitle{scroll-margin-top:100px}
+@media(max-width:850px){
+ .site-nav-inner{flex-direction:column;align-items:stretch;gap:10px;padding:14px 14px 0}
+ .site-brand{width:max-content}
+ .site-links{margin:0 -6px;padding:0 6px;gap:3px}
+ .site-links a{padding:9px 14px 12px}
+ .site-container{padding:18px 13px 42px}
+ .home-hero{grid-template-columns:1fr}
+ .home-hero-copy{padding:32px 27px 28px}
+ .home-hero-image,.home-hero-image img{min-height:280px;max-height:380px}
+ .trip-ribbon{grid-template-columns:repeat(2,1fr);margin-bottom:40px}
+ .trip-ribbon div{padding:15px 18px;border-bottom:1px solid rgba(255,255,255,.13)}
+ .intro-layout,.two-col,.weather-panel{grid-template-columns:1fr}
+ .weather-numbers{border-left:none;border-top:1px solid #d1d9d9}
+ .facts-grid,.region-grid,.info-board{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .page-head{padding:34px 25px}
+ .day{grid-template-columns:82px 1fr;gap:14px;padding:17px}
+ .day-tag{grid-column:2;justify-self:start}
+}
+@media(max-width:480px){
+ .site-links a{font-size:13px;padding:8px 11px 12px}
+ .trip-ribbon strong{font-size:14px}
+ .trip-ribbon div{padding:15px 12px}
+ .facts-grid,.region-grid,.info-board{grid-template-columns:1fr}
+ .soft-panel{padding:23px 22px}
+ .weather-panel>div{padding:25px 22px}
+ .weather-numbers strong{font-size:30px}
+ .day-number{font-size:28px}
+ .home-image-caption{left:20px;bottom:18px}
+}
