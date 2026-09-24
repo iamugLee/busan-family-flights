@@ -127,3 +127,49 @@ a{color:inherit}
  .day-number{font-size:28px}
  .home-image-caption{left:20px;bottom:18px}
 }
+
+
+/* === Accommodation section only: retains existing site palette and typography === */
+.stay-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0 38px}
+.stay-summary .info-cell{padding:21px 23px}
+.stay-summary .info-cell strong{display:block;margin-top:5px;font:600 27px Georgia,"Noto Serif TC",serif;color:#304d60}
+.stay-summary .info-cell small{letter-spacing:.11em}
+.stay-entry{margin:38px 0 56px}
+.stay-entry-head{display:flex;justify-content:space-between;align-items:end;gap:22px;flex-wrap:wrap;margin:0 0 18px}
+.stay-entry-head .section-title{margin:6px 0}
+.stay-entry-head .section-desc{margin:5px 0}
+.stay-price{min-width:185px;text-align:right;border-top:2px solid #ab775a;padding-top:7px}
+.stay-price small{font-size:12px;color:#a77755;letter-spacing:.08em}
+.stay-price strong{display:block;font:600 35px Georgia,"Noto Serif TC",serif;color:#2c4c60;line-height:1.2}
+.stay-price span{color:#86786a;font-size:12px}
+.stay-gallery{background:#e5e0d7;border-radius:4px;position:relative;overflow:hidden}
+.stay-gallery-view{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.stay-gallery-view::-webkit-scrollbar{display:none}
+.stay-gallery-item{scroll-snap-align:center;min-width:100%;margin:0;position:relative;aspect-ratio:16/7.5;background:linear-gradient(135deg,#d0d6d5,#7894a3);overflow:hidden}
+.stay-gallery-item img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.stay-gallery-item figcaption{position:absolute;bottom:0;left:0;right:0;color:#fff;background:linear-gradient(transparent,rgba(16,27,36,.82));padding:38px 24px 19px;font-size:13px;font-weight:650;letter-spacing:.05em}
+.stay-gallery-headnote{position:absolute;z-index:2;top:13px;left:15px;background:rgba(250,247,242,.94);border:1px solid rgba(223,213,203,.8);padding:5px 11px;color:#6f655d;font-size:12px;font-weight:700}
+.stay-gallery-controls{position:absolute;z-index:2;bottom:17px;right:18px;display:flex;align-items:center;gap:10px;color:white}
+.stay-gallery-controls button{border:1px solid rgba(255,255,255,.6);width:33px;height:33px;display:grid;place-items:center;border-radius:50%;background:rgba(20,37,50,.42);color:white;cursor:pointer;font-size:19px}
+.stay-gallery-controls button:disabled{opacity:.40;cursor:default}
+.stay-gallery-count{font-size:12px;min-width:38px;text-align:center;text-shadow:0 1px 2px #243745}
+.stay-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:15px 0 20px;border:1px solid #e5dacc;background:#fffdf9}
+.stay-meta div{padding:14px 20px;border-right:1px solid #e5dacc}
+.stay-meta div:last-child{border-right:0}
+.stay-meta small{display:block;color:#a57b61;font-size:11px;letter-spacing:.11em;margin-bottom:2px}
+.stay-meta strong{font-size:15px;font-weight:650;color:#3a4c57}
+.stay-subtitle{margin:29px 0 14px;color:#344f5e;font-size:22px;font-weight:700}
+.stay-places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.stay-place{background:#fffdf9;border:1px solid #e8ded3;padding:19px 21px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.stay-place small{letter-spacing:.11em;color:#ad7e5f;font-size:11px;font-weight:750}
+.stay-place strong{color:#2c4555;font-size:17px}
+.stay-place p{font-size:13px;color:#6a645d;line-height:1.8;margin:0}
+.stay-place a{font-size:13px;color:#375d73;text-underline-offset:3px;margin-top:auto}
+.stay-info{color:#6f6860;font-size:14px;line-height:1.85}
+.stay-info ul{padding-left:21px}
+.stay-info li+li{margin-top:8px}
+.stay-gallery-foot{font-size:12px;color:#81776e;line-height:1.8;margin:12px 0}
+.stay-pending{background:#f4ede5;border-left:3px solid #b18c70;color:#685d55;padding:16px 19px;line-height:1.85;margin:18px 0}
+.stay-gallery-view:focus-visible{outline:3px solid #ab775a;outline-offset:-3px}
+@media(max-width:900px){.stay-summary,.stay-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.stay-meta div:nth-child(2){border-right:0}.stay-meta div:nth-child(-n+2){border-bottom:1px solid #e5dacc}}
+@media(max-width:620px){.stay-summary,.stay-places{grid-template-columns:1fr}.stay-entry-head{display:block}.stay-price{text-align:left;margin-top:17px}.stay-gallery-item{aspect-ratio:4/3}.stay-meta div{padding:12px 14px}.stay-gallery-item figcaption{padding:40px 15px 13px;font-size:12px}.stay-gallery-controls{right:12px;bottom:12px}.stay-gallery-headnote{font-size:11px;left:11px;top:11px}}
