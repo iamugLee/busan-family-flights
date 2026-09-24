@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2026 釜山家族旅行：七人即時共用記帳、分攤及結算">
+<title>收支紀錄｜2026 釜山家族旅行</title>
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="ledger.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script defer src="ledger.js"></script>
+</head>
+<body>
+<header class="site-nav"><div class="site-nav-inner">
+<a class="site-brand" href="index.html" aria-label="釜山家族旅行首頁"><strong>BUSAN NOTE.</strong><small>FAMILY TRAVEL · NOV 2026</small></a>
+<nav class="site-links" aria-label="網站分頁">
+<a href="index.html">首頁</a><a href="tickets.html">機票資訊</a><a href="stays.html">住宿資訊</a><a href="itinerary.html">行程規劃</a><a href="flights.html">航班選擇</a><a href="ledger.html" aria-current="page">收支紀錄</a>
+</nav></div></header>
+<main class="site-container ledger-main">
+<div class="page-head"><span class="kicker">06 / OUR TRIP LEDGER</span><h1>收支紀錄</h1>
+<p>七人旅行，共同記帳。誰先付款、哪些人分攤、最後誰要轉給誰，都在這裡整理。</p>
+<div class="ledger-status" aria-live="polite"><span class="ledger-dot offline" id="sync-dot"></span><span id="sync-label">正在連線雲端帳本…</span></div></div>
+<div class="ledger-banner" id="ledger-alert" role="status" hidden></div>
+<div class="ledger-toolbar">
+<div class="ledger-tabs" role="tablist" aria-label="收支紀錄功能">
+<button class="ledger-tab active" type="button" data-view="summary" role="tab" aria-selected="true">總覽</button>
+<button class="ledger-tab" type="button" data-view="expenses" role="tab" aria-selected="false">支出明細</button>
+<button class="ledger-tab" type="button" data-view="settlements" role="tab" aria-selected="false">還款結算</button>
+<button class="ledger-tab" type="button" data-view="stats" role="tab" aria-selected="false">統計</button>
+</div>
+<button class="ledger-btn" id="new-expense" type="button">＋ 新增支出</button>
+</div>
+<section id="view-summary" class="ledger-panel" aria-label="收支總覽">
+<div class="ledger-kpis" id="summary-kpis"><div class="ledger-kpi"><small>TRIP EXPENSES</small><strong>—</strong><span>正在載入</span></div></div>
+<div class="ledger-grid">
+<div class="ledger-card"><h2>目前應收應付</h2><div class="ledger-muted" id="balance-list">載入中…</div></div>
+<div class="ledger-card"><h2>建議結算</h2><div class="ledger-muted" id="suggested-settlements">載入中…</div><p class="ledger-footnote">依各幣別分別計算，韓元與台幣不會在未設定匯率的情況下直接相抵。</p></div>
+</div>
+<div class="ledger-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><h2>最近的支出</h2><button class="ledger-btn ghost small" type="button" data-view="expenses">全部明細 →</button></div><div id="recent-expenses" class="ledger-list"><div class="ledger-muted">載入中…</div></div></div>
+</section>
+<section id="view-expenses" class="ledger-panel" hidden aria-label="所有支出明細">
+<div class="ledger-card"><div class="ledger-filter">
+<label>幣別<select class="ledger-select" id="expense-filter-currency"><option value="all">全部幣別</option><option value="KRW">韓元 KRW</option><option value="TWD">台幣 TWD</option><option value="USD">美元 USD</option></select></label>
+<label>分類<select class="ledger-select" id="expense-filter-category"><option value="all">全部分類</option><option>餐飲</option><option>交通</option><option>住宿</option><option>購物</option><option>景點</option><option>其他</option></select></label>
+<label>付款人<select class="ledger-select" id="expense-filter-member"><option value="all">全部成員</option></select></label>
+</div><div class="ledger-list" id="all-expenses"><div class="ledger-muted">載入中…</div></div></div>
+</section>
+<section id="view-settlements" class="ledger-panel" hidden aria-label="還款結算">
+<div class="ledger-grid">
+<div class="ledger-card"><h2>建議誰轉給誰</h2><div id="settlement-suggestions"><p class="ledger-muted">載入中…</p></div><div style="margin-top:18px"><button class="ledger-btn" id="record-settlement" type="button">＋ 登記已還款</button></div></div>
+<div class="ledger-card"><h2>已登記的還款</h2><div id="settlement-history"><p class="ledger-muted">尚無還款紀錄。</p></div></div>
+</div>
+<p class="ledger-footnote">登記還款只是紀錄實際完成的轉帳，不會替你發動銀行轉帳。刪除錯誤紀錄後，系統會重新計算餘額。</p>
+</section>
+<section id="view-stats" class="ledger-panel" hidden aria-label="支出統計">
+<div class="ledger-grid"><div class="ledger-card"><h2>支出類別</h2><div id="category-stats" class="ledger-muted">載入中…</div></div><div class="ledger-card"><h2>每人實際負擔</h2><div id="member-stats" class="ledger-muted">載入中…</div></div></div>
+</section>
+<div class="notice" style="margin-top:25px">這是<strong>公開共用帳本</strong>：任何能開啟此網站的人，都能查看、新增、修改及刪除資料。請勿填寫信用卡號、私人電話或其他敏感資訊；修改前請先與旅伴確認。</div>
+</main>
+<div class="ledger-modal" id="expense-modal" hidden>
+<div class="ledger-dialog" role="dialog" aria-modal="true" aria-labelledby="expense-dialog-title">
+<div class="ledger-dialog-header"><h2 id="expense-dialog-title">新增支出</h2><button class="ledger-close" id="expense-close" type="button" aria-label="關閉">×</button></div>
+<form id="expense-form">
+<div class="ledger-form-grid">
+<div class="ledger-field ledger-wide"><label for="expense-title">支出名稱 *</label><input class="ledger-input" id="expense-title" name="title" maxlength="120" placeholder="例如：海鮮晚餐、機場包車" required></div>
+<div class="ledger-field"><label for="expense-amount">金額 *</label><input class="ledger-input" id="expense-amount" name="amount" inputmode="decimal" type="number" min=".01" step=".01" placeholder="0" required></div>
+<div class="ledger-field"><label for="expense-currency">幣別</label><select class="ledger-select" id="expense-currency" name="currency"><option value="KRW">韓元 KRW ₩</option><option value="TWD">台幣 TWD NT$</option><option value="USD">美元 USD $</option></select></div>
+<div class="ledger-field"><label for="expense-paidby">誰先付款？ *</label><select class="ledger-select" id="expense-paidby" name="paid_by" required></select></div>
+<div class="ledger-field"><label for="expense-date">日期</label><input class="ledger-input" id="expense-date" name="spent_at" type="date" required></div>
+<div class="ledger-field"><label for="expense-category">分類</label><select class="ledger-select" id="expense-category" name="category"><option>餐飲</option><option>交通</option><option>住宿</option><option>購物</option><option>景點</option><option>其他</option></select></div>
+<div class="ledger-field"><label for="expense-editor">紀錄人（選填）</label><select class="ledger-select" id="expense-editor" name="editor"><option value="">不指定</option></select></div>
+<div class="ledger-field ledger-wide"><span>哪些人要分攤這筆？</span><div class="ledger-participants" id="expense-participants"></div></div>
+<div class="ledger-field ledger-wide"><span>分攤方式</span>
+<div style="display:flex;gap:19px;font-size:13px"><label><input type="radio" name="split_mode" value="equal" checked> 平均分攤</label><label><input type="radio" name="split_mode" value="custom"> 自訂各人金額</label></div>
+<div id="expense-custom" class="ledger-custom" hidden></div><div class="ledger-muted" id="split-preview"></div></div>
+<div class="ledger-field ledger-wide"><label for="expense-notes">備註（選填）</label><textarea class="ledger-textarea" id="expense-notes" maxlength="500" placeholder="例如：三人先搭計程車"></textarea></div>
+</div>
+<div class="ledger-banner" id="expense-error" hidden role="alert"></div>
+<div class="ledger-form-actions"><button class="ledger-btn ghost" id="expense-cancel" type="button">取消</button><button class="ledger-btn" id="expense-submit" type="submit">儲存支出</button></div>
+</form></div></div>
+<div class="ledger-modal" id="settlement-modal" hidden>
+<div class="ledger-dialog" role="dialog" aria-modal="true" aria-labelledby="settlement-dialog-title">
+<div class="ledger-dialog-header"><h2 id="settlement-dialog-title">登記已還款</h2><button class="ledger-close" id="settlement-close" type="button" aria-label="關閉">×</button></div>
+<form id="settlement-form"><div class="ledger-form-grid">
+<div class="ledger-field"><label for="settlement-from">付款人（誰轉帳）</label><select class="ledger-select" id="settlement-from" required></select></div>
+<div class="ledger-field"><label for="settlement-to">收款人</label><select class="ledger-select" id="settlement-to" required></select></div>
+<div class="ledger-field"><label for="settlement-amount">還款金額</label><input class="ledger-input" id="settlement-amount" type="number" min=".01" step=".01" required></div>
+<div class="ledger-field"><label for="settlement-currency">幣別</label><select class="ledger-select" id="settlement-currency"><option value="KRW">韓元 KRW ₩</option><option value="TWD">台幣 TWD NT$</option><option value="USD">美元 USD $</option></select></div>
+<div class="ledger-field"><label for="settlement-date">還款日期</label><input class="ledger-input" id="settlement-date" type="date" required></div>
+<div class="ledger-field"><label for="settlement-editor">紀錄人（選填）</label><select class="ledger-select" id="settlement-editor"><option value="">不指定</option></select></div>
+<div class="ledger-field ledger-wide"><label for="settlement-notes">備註</label><textarea class="ledger-textarea" id="settlement-notes" maxlength="500"></textarea></div>
+</div><div class="ledger-banner" id="settlement-error" hidden role="alert"></div>
+<div class="ledger-form-actions"><button class="ledger-btn ghost" type="button" id="settlement-cancel">取消</button><button class="ledger-btn" type="submit" id="settlement-submit">確認已還款</button></div>
+</form></div></div>
+<footer class="site-footer"><span>BUSAN NOTE. · 2026 釜山家族旅行</span><span>七人共用帳本 · 即時同步</span></footer>
+</body></html>
