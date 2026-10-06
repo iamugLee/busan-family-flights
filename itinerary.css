@@ -1,0 +1,82 @@
+
+/* BUSAN NOTE. — itinerary page */
+.itinerary-main{padding-bottom:76px}
+.itinerary-main .page-head{margin-bottom:20px}
+.itinerary-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.itinerary-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border:1px solid #d9ccbd;background:#fffaf4;color:#755f50;border-radius:999px;font-size:12px;font-weight:700}
+.itinerary-chip.car{background:#e9eff1;color:#42647a;border-color:#cfdcdf}
+.itinerary-chip.fixed{background:#f3e6dc;color:#915e45;border-color:#dfc7b7}
+.itinerary-toolbar{position:sticky;top:83px;z-index:35;background:rgba(247,243,237,.96);backdrop-filter:blur(12px);padding:14px 0 13px;border-bottom:1px solid var(--line);margin-bottom:25px}
+.itinerary-tabs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:1px}
+.itinerary-tabs::-webkit-scrollbar{display:none}
+.itinerary-tab{border:1px solid transparent;border-radius:999px;background:transparent;color:#746d66;font:650 13px inherit;white-space:nowrap;padding:10px 17px;cursor:pointer}
+.itinerary-tab.active{background:#fffdf9;border-color:#d6c7b7;color:var(--navy);box-shadow:0 3px 12px rgba(91,72,56,.08)}
+.itinerary-panel[hidden]{display:none!important}
+.day-hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);gap:24px;align-items:stretch;margin-bottom:24px}
+.day-hero-copy{background:#fffdf9;border:1px solid var(--line);padding:30px}
+.day-hero-copy small{font-size:11px;letter-spacing:.15em;color:#a4785b;font-weight:800}
+.day-hero-copy h2{font:600 clamp(27px,3.3vw,39px) Georgia,"Noto Serif TC",serif;color:#2d4c5d;margin:8px 0 12px;line-height:1.3}
+.day-hero-copy p{color:#6d655e;margin:0;line-height:1.9}
+.day-hero-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:20px}
+.day-hero-summary div{border-top:1px solid #dfd3c6;padding-top:10px}
+.day-hero-summary span{display:block;font-size:10px;letter-spacing:.12em;color:#a27b62}
+.day-hero-summary strong{display:block;color:#344e5e;font-size:13px;margin-top:3px}
+.itin-gallery{position:relative;overflow:hidden;background:#d9e0e1;border-radius:4px;min-height:320px}
+.itin-gallery-view{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.itin-gallery-view::-webkit-scrollbar{display:none}
+.itin-gallery-item{min-width:100%;height:100%;min-height:320px;scroll-snap-align:center;position:relative;margin:0;background:linear-gradient(135deg,#b9c8ca,#5c7d8f);overflow:hidden}
+.itin-gallery-item img{display:block;width:100%;height:100%;min-height:320px;object-fit:cover;object-position:center}
+.itin-gallery-item figcaption{position:absolute;inset:auto 0 0;color:#fff;padding:44px 20px 17px;background:linear-gradient(transparent,rgba(20,34,44,.82));font-size:12px;font-weight:650}
+.itin-gallery-controls{position:absolute;z-index:2;right:14px;bottom:13px;display:flex;align-items:center;gap:8px;color:#fff}
+.itin-gallery-controls button{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.68);background:rgba(24,44,56,.46);color:#fff;font-size:19px;display:grid;place-items:center;cursor:pointer}
+.itin-gallery-controls button:disabled{opacity:.4;cursor:default}
+.itin-gallery-count{font-size:11px;min-width:42px;text-align:center;text-shadow:0 1px 3px #20343f}
+.itinerary-timeline{display:grid;gap:14px}
+.itinerary-stop{display:grid;grid-template-columns:92px minmax(0,1fr);gap:17px;background:#fffdf9;border:1px solid var(--line);padding:21px 22px;position:relative}
+.itinerary-stop::before{content:"";position:absolute;left:111px;top:23px;bottom:23px;width:1px;background:#eee4d9}
+.stop-time{color:#a07357;font:600 19px Georgia,serif;line-height:1.35;padding-top:2px}
+.stop-time small{display:block;font:700 10px -apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif;letter-spacing:.12em;color:#a59687;margin-top:5px}
+.stop-body{padding-left:18px}
+.stop-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.stop-head h3{margin:0;color:#304d5e;font-size:19px;line-height:1.5}
+.stop-label{font-size:10px;letter-spacing:.1em;color:#8d6d58;background:#f5ece4;padding:4px 8px;border-radius:999px;white-space:nowrap;font-weight:750}
+.stop-label.drive{background:#e8f0f2;color:#4a6c80}
+.stop-label.special{background:#efe7f3;color:#6c5777}
+.stop-body>p{color:#6b645d;font-size:14px;line-height:1.85;margin:8px 0 0}
+.stop-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.map-link,.detail-link{display:inline-flex;align-items:center;gap:6px;text-decoration:none;border:1px solid #c9d5d7;color:#3b6175;background:#f8fbfa;padding:7px 10px;font-size:12px;font-weight:700}
+.map-link:hover,.detail-link:hover{background:#edf4f5}
+.meal-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.meal-option{border:1px solid #e4d8cb;background:#fbf8f3;padding:15px;display:flex;flex-direction:column;gap:6px;min-height:172px}
+.meal-option.is-primary{border-top:3px solid #ae795d;padding-top:13px}
+.meal-option .rank{font-size:10px;letter-spacing:.12em;color:#aa7657;font-weight:800}
+.meal-option strong{color:#304c5c;font-size:15px;line-height:1.5}
+.meal-option p{margin:0;color:#716960;font-size:12px;line-height:1.7}
+.meal-option .map-link{margin-top:auto;align-self:flex-start}
+.split-plan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+.split-card{border:1px solid #dfd5c9;background:#f9f6f1;padding:17px}
+.split-card h4{color:#324f60;margin:0 0 8px;font-size:15px}
+.split-card p{font-size:12px;color:#706860;margin:0;line-height:1.75}
+.split-card .stop-actions{margin-top:10px}
+.callout{margin-top:13px;border-left:3px solid #b28667;background:#f5ede4;padding:12px 14px;color:#665e56;font-size:12px;line-height:1.75}
+.itinerary-legend{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+.itinerary-legend span{font-size:11px;color:#736b63;border:1px solid #dfd4c8;background:#fffdf9;padding:5px 9px;border-radius:999px}
+.photo-note{font-size:11px;color:#8c8177;line-height:1.75;margin:14px 0 0}
+@media(max-width:850px){
+ .itinerary-toolbar{top:122px}
+ .day-hero{grid-template-columns:1fr}
+ .itin-gallery,.itin-gallery-item,.itin-gallery-item img{min-height:280px}
+ .meal-options{grid-template-columns:1fr}
+ .split-plan{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+ .itinerary-toolbar{top:121px;margin-left:-13px;margin-right:-13px;padding-left:13px;padding-right:13px}
+ .day-hero-copy{padding:24px 20px}
+ .day-hero-summary{grid-template-columns:1fr 1fr}
+ .itinerary-stop{grid-template-columns:62px 1fr;padding:17px 14px;gap:10px}
+ .itinerary-stop::before{left:83px}
+ .stop-time{font-size:16px}
+ .stop-body{padding-left:13px}
+ .stop-head h3{font-size:17px}
+ .itin-gallery,.itin-gallery-item,.itin-gallery-item img{min-height:240px}
+}
