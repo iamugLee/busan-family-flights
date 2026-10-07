@@ -118,8 +118,9 @@
 .rental-card{
   position:relative;
   min-height:148px;
-  border:1px solid #ded3c7;
+  border:1px solid #dacdbf;
   background:#faf7f2;
+  box-shadow:0 5px 18px rgba(66,76,82,.045);
   padding:18px 18px 16px;
   display:flex;
   flex-direction:column;
@@ -139,8 +140,8 @@
   width:100%;
   padding:0 0 10px;
   margin:0 0 13px;
-  border-bottom:1px solid #e7ddd2;
-  color:#a07861;
+  border-bottom:1px solid #d8cabc;
+  color:#86634e;
   font-size:10px;
   line-height:1.35;
   letter-spacing:.14em;
