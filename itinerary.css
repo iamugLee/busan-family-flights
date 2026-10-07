@@ -81,15 +81,110 @@
  .itin-gallery,.itin-gallery-item,.itin-gallery-item img{min-height:240px}
 }
 
-.rental-summary{margin:18px 0 8px;background:#fffdf9;border:1px solid var(--line);padding:24px}
-.rental-summary-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
-.rental-summary-head h2{font:600 25px Georgia,"Noto Serif TC",serif;color:#304d5e;margin:5px 0 8px}
-.rental-summary-head p{margin:0;color:#6d655e;line-height:1.8;font-size:13px;max-width:760px}
-.rental-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
-.rental-card{border-top:2px solid #b28569;background:#f8f4ee;padding:16px;display:flex;flex-direction:column;gap:10px}
-.rental-card small{display:block;font-size:10px;letter-spacing:.12em;color:#a07861;font-weight:800;line-height:1.4;margin:0}
-.rental-card strong{display:block;color:#304c5d;font-size:15px;line-height:1.5;margin:0}
-.rental-card p{margin:0;color:#81766d;font-size:11px;line-height:1.6}
-.rental-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
-@media(max-width:850px){.rental-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.rental-summary{padding:18px 15px}.rental-grid,.rental-detail-grid{grid-template-columns:1fr}}
+/* Confirmed rental car summary */
+.rental-summary{
+  margin:24px 0 12px;
+  background:#fffdf9;
+  border:1px solid var(--line);
+  padding:26px;
+}
+.rental-summary-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.rental-summary-head>div{min-width:0;flex:1 1 620px}
+.rental-summary-head h2{
+  font:600 27px Georgia,"Noto Serif TC",serif;
+  color:#304d5e;
+  margin:6px 0 10px;
+  line-height:1.35;
+}
+.rental-summary-head p{
+  margin:0;
+  color:#6d655e;
+  line-height:1.85;
+  font-size:13px;
+  max-width:820px;
+}
+.rental-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:22px;
+}
+.rental-card{
+  position:relative;
+  min-height:148px;
+  border:1px solid #ded3c7;
+  background:#faf7f2;
+  padding:18px 18px 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.rental-card::before{
+  content:"";
+  position:absolute;
+  left:-1px;
+  right:-1px;
+  top:-1px;
+  height:3px;
+  background:#b28569;
+}
+.rental-card small{
+  display:block;
+  width:100%;
+  padding:0 0 10px;
+  margin:0 0 13px;
+  border-bottom:1px solid #e7ddd2;
+  color:#a07861;
+  font-size:10px;
+  line-height:1.35;
+  letter-spacing:.14em;
+  font-weight:800;
+}
+.rental-card strong{
+  display:block;
+  margin:0;
+  color:#304c5d;
+  font-size:17px;
+  line-height:1.45;
+  font-weight:750;
+}
+.rental-card p{
+  margin:7px 0 0;
+  color:#80766d;
+  font-size:12px;
+  line-height:1.55;
+}
+.rental-card.total strong{
+  font:700 24px Georgia,"Noto Serif TC",serif;
+  color:#2f5368;
+  letter-spacing:.01em;
+}
+.rental-card.total::before{background:#6f8fa0}
+.rental-detail-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.rental-detail-grid .split-card{
+  background:#fbf8f3;
+  border-color:#e2d7cb;
+}
+@media(max-width:900px){
+  .rental-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .rental-summary{padding:19px 15px}
+  .rental-summary-head h2{font-size:24px}
+  .rental-grid,.rental-detail-grid{grid-template-columns:1fr}
+  .rental-card{min-height:0;padding:17px 16px 15px}
+  .rental-card small{margin-bottom:11px}
+  .rental-card strong{font-size:16px}
+  .rental-card.total strong{font-size:23px}
+}
