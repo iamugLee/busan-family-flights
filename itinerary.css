@@ -86,10 +86,10 @@
 .rental-summary-head h2{font:600 25px Georgia,"Noto Serif TC",serif;color:#304d5e;margin:5px 0 8px}
 .rental-summary-head p{margin:0;color:#6d655e;line-height:1.8;font-size:13px;max-width:760px}
 .rental-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
-.rental-card{border-top:2px solid #b28569;background:#f8f4ee;padding:16px}
-.rental-card small{display:block;font-size:10px;letter-spacing:.12em;color:#a07861;font-weight:800}
-.rental-card strong{display:block;color:#304c5d;font-size:15px;margin-top:6px;line-height:1.5}
-.rental-card p{margin:4px 0 0;color:#81766d;font-size:11px}
+.rental-card{border-top:2px solid #b28569;background:#f8f4ee;padding:16px;display:flex;flex-direction:column;gap:10px}
+.rental-card small{display:block;font-size:10px;letter-spacing:.12em;color:#a07861;font-weight:800;line-height:1.4;margin:0}
+.rental-card strong{display:block;color:#304c5d;font-size:15px;line-height:1.5;margin:0}
+.rental-card p{margin:0;color:#81766d;font-size:11px;line-height:1.6}
 .rental-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
 @media(max-width:850px){.rental-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.rental-summary{padding:18px 15px}.rental-grid,.rental-detail-grid{grid-template-columns:1fr}}
