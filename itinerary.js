@@ -327,9 +327,18 @@
   document.querySelectorAll("[data-open-day]").forEach(card=>{
     card.addEventListener("click",()=>activate(card.dataset.openDay));
   });
+
+  // Initial page load: honor the requested tab without auto-scrolling.
+  // Browsers may jump to the hash target before JS runs, so force the viewport
+  // back to the top after the initial tab has been activated.
+  if("scrollRestoration" in history)history.scrollRestoration="manual";
   const hash=location.hash.replace("#","");
-  if(hash&&document.getElementById(hash))activate(hash);
+  if(hash&&document.getElementById(hash))activate(hash,false);
   else activate("trip-overview",false);
+  requestAnimationFrame(()=>{
+    window.scrollTo({top:0,left:0,behavior:"auto"});
+    setTimeout(()=>window.scrollTo({top:0,left:0,behavior:"auto"}),60);
+  });
 
   document.querySelectorAll(".itin-gallery").forEach(g=>{
     const view=g.querySelector(".itin-gallery-view");
