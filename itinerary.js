@@ -309,7 +309,7 @@
 
   panels.forEach(setupMap);
 
-  const activate=(id,scroll=true)=>{
+  const activate=(id,scroll=true,updateUrl=true)=>{
     const target=document.getElementById(id);
     if(!target)return;
     tabs.forEach(tab=>{
@@ -318,7 +318,15 @@
       tab.setAttribute("aria-selected",on?"true":"false");
     });
     panels.forEach(panel=>panel.hidden=panel!==target);
-    history.replaceState(null,"","#"+id);
+
+    if(updateUrl){
+      const url=new URL(location.href);
+      url.hash="";
+      if(id==="trip-overview")url.searchParams.delete("tab");
+      else url.searchParams.set("tab",id);
+      history.replaceState(null,"",url.pathname+(url.search?url.search:""));
+    }
+
     setTimeout(()=>{if(maps[id]){maps[id].map.invalidateSize();fitDay(id);}},80);
     if(scroll)window.scrollTo({top:document.querySelector(".itinerary-toolbar").offsetTop-90,behavior:"smooth"});
   };
@@ -328,17 +336,28 @@
     card.addEventListener("click",()=>activate(card.dataset.openDay));
   });
 
-  // Initial page load: honor the requested tab without auto-scrolling.
-  // Browsers may jump to the hash target before JS runs, so force the viewport
-  // back to the top after the initial tab has been activated.
-  if("scrollRestoration" in history)history.scrollRestoration="manual";
-  const hash=location.hash.replace("#","");
-  if(hash&&document.getElementById(hash))activate(hash,false);
-  else activate("trip-overview",false);
-  requestAnimationFrame(()=>{
-    window.scrollTo({top:0,left:0,behavior:"auto"});
-    setTimeout(()=>window.scrollTo({top:0,left:0,behavior:"auto"}),60);
-  });
+  // Never use URL hash for itinerary tabs: hash anchors can make some browsers
+  // auto-scroll again after images/fonts finish loading.
+  const url=new URL(location.href);
+  let initialTab=url.searchParams.get("tab");
+  const legacyHash=location.hash.replace("#","");
+  if(!initialTab&&legacyHash&&document.getElementById(legacyHash))initialTab=legacyHash;
+  if(!initialTab||!document.getElementById(initialTab))initialTab="trip-overview";
+
+  url.hash="";
+  if(initialTab==="trip-overview")url.searchParams.delete("tab");
+  else url.searchParams.set("tab",initialTab);
+  history.replaceState(null,"",url.pathname+(url.search?url.search:""));
+
+  activate(initialTab,false,false);
+
+  // Belt-and-suspenders protection against browser history/anchor restoration.
+  const forceTop=()=>window.scrollTo({top:0,left:0,behavior:"auto"});
+  forceTop();
+  requestAnimationFrame(forceTop);
+  setTimeout(forceTop,0);
+  setTimeout(forceTop,80);
+  window.addEventListener("load",forceTop,{once:true});
 
   document.querySelectorAll(".itin-gallery").forEach(g=>{
     const view=g.querySelector(".itin-gallery-view");
