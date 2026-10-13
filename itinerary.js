@@ -170,15 +170,58 @@
     });
 
     if(typeof L==="undefined"){
-      mapPanel.querySelector(".itinerary-map").innerHTML='<div class="map-load-error">互動地圖元件暫時載入失敗。<br>行程中的 NAVER MAP 連結仍可正常使用。</div>';
+      mapPanel.querySelector(".itinerary-map").innerHTML='<div class="map-load-error"><strong>互動地圖元件沒有載入成功</strong><br>可能是瀏覽器或網路擋住地圖資源。行程中的 NAVER MAP 連結仍可使用。<br><button type="button" class="map-retry-inline">重新載入地圖</button></div>';
+      mapPanel.querySelector(".map-retry-inline")?.addEventListener("click",()=>location.reload());
       return;
     }
 
+    const mapEl=mapPanel.querySelector(".itinerary-map");
+    mapEl.classList.add("is-loading");
     const map=L.map("map-"+id,{zoomControl:true,scrollWheelZoom:false,preferCanvas:true});
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+
+    let tileLayer=null;
+    let tileErrors=0;
+    let switchedTiles=false;
+    const osm=()=>L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
       maxZoom:19,
       attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
-    }).addTo(map);
+    });
+    const carto=()=>L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
+      maxZoom:19,
+      subdomains:"abcd",
+      attribution:'&copy; OpenStreetMap &copy; CARTO'
+    });
+    const attachTiles=(layer,isFallback=false)=>{
+      tileLayer=layer.addTo(map);
+      tileLayer.once("load",()=>{
+        mapEl.classList.remove("is-loading","is-tile-error");
+        const msg=mapPanel.querySelector(".map-runtime-status");
+        if(msg)msg.remove();
+      });
+      tileLayer.on("tileerror",()=>{
+        tileErrors++;
+        if(tileErrors>=3&&!switchedTiles&&!isFallback){
+          switchedTiles=true;
+          try{map.removeLayer(tileLayer);}catch(e){}
+          attachTiles(carto(),true);
+        }else if(tileErrors>=8&&isFallback){
+          mapEl.classList.add("is-tile-error");
+          showRuntimeError("底圖暫時無法載入，但行程點與相對位置仍可使用。");
+        }
+      });
+    };
+    const showRuntimeError=(message)=>{
+      let box=mapPanel.querySelector(".map-runtime-status");
+      if(!box){
+        box=document.createElement("div");
+        box.className="map-runtime-status";
+        box.innerHTML='<span></span><button type="button">重新載入地圖</button>';
+        mapPanel.appendChild(box);
+        box.querySelector("button").addEventListener("click",()=>location.reload());
+      }
+      box.querySelector("span").textContent=message;
+    };
+    attachTiles(osm());
 
     const state={map,markers:new Map(),line:null,visible:{food:true,optional:false},route,mapPanel,cards};
     maps[id]=state;
