@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="2026 釜山家族旅行 11/15–11/19 每日行程、餐飲備案、自駕動線與 NAVER Map">
 <title>行程規劃｜2026 釜山家族旅行</title>
-<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"><link rel="stylesheet" href="itinerary.css?v=20261014-map3">
-<script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js'"></script><script defer src="itinerary.js?v=20261014-map3"></script>
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"><link rel="stylesheet" href="itinerary.css?v=20261014-overview1">
+<script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js'"></script><script defer src="itinerary.js?v=20261014-overview1"></script>
 </head>
 <body>
 <header class="site-nav"><div class="site-nav-inner">
@@ -14,14 +14,74 @@
 </div></header>
 
 <main class="site-container itinerary-main">
-<div class="page-head">
+<div class="page-head itinerary-page-head">
   <span class="kicker">04 / DAY BY DAY</span>
   <h1>行程規劃</h1>
-  <p>以住宿位置為第一優先：前兩晚住廣安里就集中玩海雲台、尾浦、青沙浦與 Centum；11/17 搬到草梁後，就留在南浦、松島、影島、西面與釜山站生活圈，不再往東折返。主要交通為 9 人座 Hyundai STARIA，自駕為主；每個正式飲食時段保留三個鄰近方案。11/15 改成廣安里夜生活＋NASUB，11/18 以 Diamond Bay 夜航作為主要夜景。</p>
-  <div class="itinerary-meta"><span class="itinerary-chip car">🚐 主要交通：STARIA 自駕</span><span class="itinerary-chip">👨‍👩‍👧‍👦 7 人・4 長輩＋3 年輕人</span><span class="itinerary-chip fixed">🍸 11/15 NASUB</span><span class="itinerary-chip fixed">🌉 11/17 松島＋龍宮雲橋</span><span class="itinerary-chip fixed">⛵ 11/18 Diamond Bay</span></div>
+  <div class="itinerary-meta itinerary-area-tags" aria-label="每日主要區域">
+    <span class="itinerary-chip"><strong>11/15</strong> 廣安里</span>
+    <span class="itinerary-chip"><strong>11/16</strong> 海雲台・尾浦・青沙浦・Centum</span>
+    <span class="itinerary-chip"><strong>11/17</strong> 南浦・松島</span>
+    <span class="itinerary-chip"><strong>11/18</strong> 影島・西面・龍湖灣</span>
+    <span class="itinerary-chip"><strong>11/19</strong> 草梁・釜山站</span>
+  </div>
 </div>
 
-<section class="rental-summary" aria-label="已確認租車資訊">
+
+
+<div class="itinerary-toolbar">
+  <div class="itinerary-tabs" role="tablist" aria-label="行程總覽與每日行程">
+    <button class="itinerary-tab active overview-tab" type="button" data-target="trip-overview" role="tab" aria-selected="true">行程總覽</button>
+    <button class="itinerary-tab" type="button" data-target="day-1115" role="tab" aria-selected="false">11/15（日）</button>
+    <button class="itinerary-tab" type="button" data-target="day-1116" role="tab" aria-selected="false">11/16（一）</button>
+    <button class="itinerary-tab" type="button" data-target="day-1117" role="tab" aria-selected="false">11/17（二）</button>
+    <button class="itinerary-tab" type="button" data-target="day-1118" role="tab" aria-selected="false">11/18（三）</button>
+    <button class="itinerary-tab" type="button" data-target="day-1119" role="tab" aria-selected="false">11/19（四）</button>
+  </div>
+</div>
+
+<section class="itinerary-panel overview-panel" id="trip-overview">
+  <div class="overview-intro">
+    <div>
+      <span class="section-overline">TRIP AT A GLANCE</span>
+      <h2>5 天行程總覽</h2>
+      <p>先看每天主要活動區域與行程節奏；要看時間、餐廳備案、照片與互動地圖，再切到對應日期。</p>
+    </div>
+  </div>
+
+  <div class="overview-days">
+    <button class="overview-day-card" type="button" data-open-day="day-1115">
+      <span class="overview-day-date">11/15 SUN</span>
+      <strong>廣安里</strong>
+      <p>抵達釜山・取車・住宿周邊休息・廣安里晚餐・海灘夜景・NASUB</p>
+      <small>STAY｜Ara Gaon・廣安里</small>
+    </button>
+    <button class="overview-day-card" type="button" data-open-day="day-1116">
+      <span class="overview-day-date">11/16 MON</span>
+      <strong>海雲台・尾浦・青沙浦・Centum</strong>
+      <p>X the SKY・天空膠囊・青沙浦・海岸列車・Wannabe 醫美／自由活動</p>
+      <small>STAY｜Ara Gaon・廣安里</small>
+    </button>
+    <button class="overview-day-card" type="button" data-open-day="day-1117">
+      <span class="overview-day-date">11/17 TUE</span>
+      <strong>南浦・松島</strong>
+      <p>換住宿・札嘎其／BIFF／國際市場・松島海上纜車・龍宮雲橋</p>
+      <small>MOVE｜廣安里 → 草梁／釜山站</small>
+    </button>
+    <button class="overview-day-card" type="button" data-open-day="day-1118">
+      <span class="overview-day-date">11/18 WED</span>
+      <strong>影島・西面・龍湖灣</strong>
+      <p>白淺灘・影島海景咖啡・西面／田浦・Diamond Bay 夜航</p>
+      <small>STAY｜瑞好齋・草梁／釜山站</small>
+    </button>
+    <button class="overview-day-card" type="button" data-open-day="day-1119">
+      <span class="overview-day-date">11/19 THU</span>
+      <strong>草梁・釜山站</strong>
+      <p>最後採買・釜山站午餐・14:15 前往機場・16:00 還車・18:55 回台</p>
+      <small>DEPARTURE｜金海機場</small>
+    </button>
+  </div>
+
+  <section class="rental-summary" aria-label="已確認租車資訊">
   <div class="rental-summary-head">
     <div><span class="section-overline">CONFIRMED RENTAL CAR</span><h2>LOTTE rent-a-car｜STARIA 9人座</h2><p>本次釜山市區交通已確認以租車自駕為主。取車與還車都在金海機場 LOTTE rent-a-car 櫃檯，以下資訊依預約確認信整理。</p></div>
     <span class="status-chip blue">租車已確認</span>
@@ -39,18 +99,9 @@
     <div class="split-card"><h4>公開頁面隱私</h4><p>網站僅保留旅伴實際需要的取還車資訊；預約編號、Email 等辨識性資料不公開顯示。</p></div>
   </div>
 </section>
+</section>
 
-<div class="itinerary-toolbar">
-  <div class="itinerary-tabs" role="tablist" aria-label="每日行程">
-    <button class="itinerary-tab active" type="button" data-target="day-1115" role="tab" aria-selected="true">11/15（日）</button>
-    <button class="itinerary-tab" type="button" data-target="day-1116" role="tab" aria-selected="false">11/16（一）</button>
-    <button class="itinerary-tab" type="button" data-target="day-1117" role="tab" aria-selected="false">11/17（二）</button>
-    <button class="itinerary-tab" type="button" data-target="day-1118" role="tab" aria-selected="false">11/18（三）</button>
-    <button class="itinerary-tab" type="button" data-target="day-1119" role="tab" aria-selected="false">11/19（四）</button>
-  </div>
-</div>
-
-<section class="itinerary-panel" id="day-1115">
+<section class="itinerary-panel" id="day-1115" hidden>
   <div class="day-hero">
     <div class="day-hero-copy"><small>DAY 01 · ARRIVAL / GWANGALLI NIGHT</small><h2>抵達釜山，第一晚就留在廣安里。</h2><p>早到的三人 06:10 抵達後取 STARIA、到廣安里吃早餐並休息；傍晚再開車回機場接齊另外四人。全員集合後不再跑其他區域，直接用廣安里晚餐、海灘夜景與 NASUB 開啟這趟旅行。</p><div class="day-hero-summary"><div><span>STAY</span><strong>Ara Gaon・廣安里</strong></div><div><span>RENTAL PICK-UP</span><strong>08:00・金海機場 LOTTE</strong></div><div><span>EVENING</span><strong>廣安里晚餐＋海灘散步</strong></div><div><span>NIGHT</span><strong>NASUB・廣安大橋夜景</strong></div></div></div>
     
