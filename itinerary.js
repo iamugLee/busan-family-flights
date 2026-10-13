@@ -309,7 +309,7 @@
 
   panels.forEach(setupMap);
 
-  const activate=id=>{
+  const activate=(id,scroll=true)=>{
     const target=document.getElementById(id);
     if(!target)return;
     tabs.forEach(tab=>{
@@ -320,13 +320,16 @@
     panels.forEach(panel=>panel.hidden=panel!==target);
     history.replaceState(null,"","#"+id);
     setTimeout(()=>{if(maps[id]){maps[id].map.invalidateSize();fitDay(id);}},80);
-    window.scrollTo({top:document.querySelector(".itinerary-toolbar").offsetTop-90,behavior:"smooth"});
+    if(scroll)window.scrollTo({top:document.querySelector(".itinerary-toolbar").offsetTop-90,behavior:"smooth"});
   };
 
   tabs.forEach(tab=>tab.addEventListener("click",()=>activate(tab.dataset.target)));
+  document.querySelectorAll("[data-open-day]").forEach(card=>{
+    card.addEventListener("click",()=>activate(card.dataset.openDay));
+  });
   const hash=location.hash.replace("#","");
   if(hash&&document.getElementById(hash))activate(hash);
-  else if(maps["day-1115"])setTimeout(()=>{maps["day-1115"].map.invalidateSize();fitDay("day-1115");},80);
+  else activate("trip-overview",false);
 
   document.querySelectorAll(".itin-gallery").forEach(g=>{
     const view=g.querySelector(".itin-gallery-view");
