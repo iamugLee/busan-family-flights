@@ -247,10 +247,8 @@
     let point=state.route.points.find(p=>p.order===order);
     if(!point)return;
     if(point.kind==="food"&&!state.visible.food){
-      state.visible.food=true;
-      const b=state.mapPanel.querySelector('[data-layer="food"]'); if(b)b.setAttribute("aria-pressed","true");
-      state.mapPanel.querySelector('[data-layer="food"]')?.click();
-      state.visible.food=true;
+      const btn=state.mapPanel.querySelector('[data-layer="food"]');
+      if(btn)btn.click();
     }
     if(point.kind==="optional"&&!state.visible.optional){
       const btn=state.mapPanel.querySelector('[data-layer="optional"]');
