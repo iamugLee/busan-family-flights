@@ -455,3 +455,47 @@
   .itinerary-map-panel .leaflet-popup-content{width:235px!important}
   .map-popup img{height:108px}
 }
+
+
+/* Map loading / fallback states */
+.itinerary-map.is-loading::after{
+  content:"地圖載入中…";
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  z-index:650;
+  padding:9px 12px;
+  border:1px solid #d9cfc4;
+  background:rgba(255,253,249,.94);
+  color:#6d655e;
+  font-size:12px;
+  font-weight:700;
+  pointer-events:none;
+}
+.map-runtime-status{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 14px;
+  border-top:1px solid #e4d9ce;
+  background:#fff6ee;
+  color:#7b5a47;
+  font-size:11px;
+  line-height:1.6;
+}
+.map-runtime-status button,
+.map-retry-inline{
+  border:1px solid #d6c5b7;
+  background:#fffdf9;
+  color:#7d5e4a;
+  padding:7px 10px;
+  font:700 11px inherit;
+  cursor:pointer;
+}
+.map-load-error strong{
+  display:block;
+  color:#4b6370;
+  margin-bottom:6px;
+}
+.map-retry-inline{margin-top:12px}
