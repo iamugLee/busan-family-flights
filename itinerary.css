@@ -623,18 +623,33 @@
 }
 
 
-/* Keep every desktop day hero the same height as the 11/16 reference card */
+
+
+/* Uniform desktop day hero size — match the approved 11/16 layout */
 @media (min-width:851px){
+  .day-hero{
+    align-items:stretch;
+  }
   .day-hero-copy,
   .itin-gallery{
-    height:var(--day-hero-reference-height,auto);
-    min-height:0;
+    height:500px !important;
+    min-height:500px !important;
+    max-height:500px !important;
     box-sizing:border-box;
+  }
+  .day-hero-copy{
+    overflow:hidden;
   }
   .itin-gallery-view,
   .itin-gallery-item,
   .itin-gallery-item img{
-    height:100%;
-    min-height:0;
+    height:500px !important;
+    min-height:500px !important;
+    max-height:500px !important;
+  }
+  .itin-gallery-item img{
+    width:100%;
+    object-fit:cover;
+    object-position:center;
   }
 }
