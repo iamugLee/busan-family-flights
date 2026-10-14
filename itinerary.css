@@ -621,3 +621,20 @@
   .overview-day-card{min-height:0}
   .itinerary-area-tags .itinerary-chip{font-size:11px}
 }
+
+
+/* Keep every desktop day hero the same height as the 11/16 reference card */
+@media (min-width:851px){
+  .day-hero-copy,
+  .itin-gallery{
+    height:var(--day-hero-reference-height,auto);
+    min-height:0;
+    box-sizing:border-box;
+  }
+  .itin-gallery-view,
+  .itin-gallery-item,
+  .itin-gallery-item img{
+    height:100%;
+    min-height:0;
+  }
+}
