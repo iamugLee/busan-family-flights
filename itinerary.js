@@ -83,43 +83,6 @@
     }
   };
 
-  const syncDayHeroHeight=()=>{
-    const container=document.querySelector(".site-container");
-    const toolbar=document.querySelector(".itinerary-toolbar");
-    const referencePanel=document.getElementById("day-1116");
-    const referenceCopy=referencePanel?.querySelector(".day-hero-copy");
-    if(!container||!toolbar||!referencePanel||!referenceCopy)return;
-
-    if(window.matchMedia("(max-width:850px)").matches){
-      container.style.removeProperty("--day-hero-reference-height");
-      return;
-    }
-
-    const wasHidden=referencePanel.hidden;
-    const previousStyle=referencePanel.getAttribute("style");
-    container.style.removeProperty("--day-hero-reference-height");
-
-    if(wasHidden){
-      referencePanel.hidden=false;
-      referencePanel.style.position="absolute";
-      referencePanel.style.visibility="hidden";
-      referencePanel.style.pointerEvents="none";
-      referencePanel.style.left="-99999px";
-      referencePanel.style.top="0";
-      referencePanel.style.width=toolbar.getBoundingClientRect().width+"px";
-      referencePanel.style.zIndex="-1";
-    }
-
-    const height=Math.ceil(referenceCopy.getBoundingClientRect().height);
-    if(height>0)container.style.setProperty("--day-hero-reference-height",height+"px");
-
-    if(wasHidden){
-      referencePanel.hidden=true;
-      if(previousStyle===null)referencePanel.removeAttribute("style");
-      else referencePanel.setAttribute("style",previousStyle);
-    }
-  };
-
   const tabs=[...document.querySelectorAll(".itinerary-tab")];
   const panels=[...document.querySelectorAll(".itinerary-panel")];
   const maps={};
@@ -345,15 +308,6 @@
   };
 
   panels.forEach(setupMap);
-
-  syncDayHeroHeight();
-  if(document.fonts?.ready)document.fonts.ready.then(syncDayHeroHeight);
-  window.addEventListener("load",syncDayHeroHeight,{once:true});
-  let heroResizeTimer;
-  window.addEventListener("resize",()=>{
-    clearTimeout(heroResizeTimer);
-    heroResizeTimer=setTimeout(syncDayHeroHeight,120);
-  });
 
   const activate=(id,scroll=true,updateUrl=true)=>{
     const target=document.getElementById(id);
