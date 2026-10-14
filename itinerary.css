@@ -655,31 +655,42 @@
 }
 
 
-/* Confirmed Wannabe clinic booking — simplified */
+/* Confirmed Wannabe clinic booking — text only */
 .clinic-simple-card{
   margin-top:16px;
   border:1px solid #dfd3c7;
   background:#f8f4ef;
-  padding:18px;
+  padding:18px 20px;
 }
-.clinic-guide-simple{
-  margin:0 auto;
-  max-width:520px;
-  background:#fff;
-  border:1px solid #e3d8ce;
-  overflow:hidden;
+.clinic-text-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.clinic-guide-simple img{
+.clinic-text-main{min-width:0}
+.clinic-booking-kicker{
   display:block;
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  background:#fff;
+  color:#a45a43;
+  font-size:10px;
+  letter-spacing:.13em;
+  font-weight:800;
+  margin-bottom:5px;
+}
+.clinic-text-main strong{
+  display:block;
+  color:#304d5e;
+  font:600 22px Georgia,"Noto Serif TC",serif;
+  margin-bottom:6px;
+}
+.clinic-text-main p{
+  margin:0;
+  color:#6c645d;
+  font-size:12px;
+  line-height:1.75;
 }
 .clinic-simple-actions{
-  display:flex;
-  justify-content:center;
-  margin-top:14px;
+  flex:0 0 auto;
 }
 .clinic-map-link{
   min-width:210px;
@@ -689,8 +700,11 @@
 .clinic-split-plan{
   margin-top:14px;
 }
-@media(max-width:620px){
-  .clinic-simple-card{padding:12px}
-  .clinic-guide-simple{max-width:none}
+@media(max-width:700px){
+  .clinic-text-card{
+    display:block;
+    padding:15px;
+  }
+  .clinic-simple-actions{margin-top:12px}
   .clinic-map-link{width:100%}
 }
