@@ -39,8 +39,8 @@
         {order:5,kind:"food",stopIndex:4,title:"青沙浦午餐｜烤貝／海鮮",time:"13:30",lat:35.1600,lng:129.1914,note:"노란마후라／동백집／수민이네。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%EC%B2%AD%EC%82%AC%ED%8F%AC%20%EB%B6%80%EC%82%B0"},
         {order:6,kind:"main",stopIndex:5,title:"青沙浦＋踏石展望台＋DIART",time:"14:30",lat:35.1628,lng:129.1962,note:"依長輩腳力散步；DIART Coffee 為彈性休息。",photo:IMG.haeundae,naver:"https://naver.me/Gxk1OJez"},
         {order:7,kind:"main",stopIndex:6,title:"青沙浦站｜海岸列車回尾浦",time:"15:30",lat:35.1601,lng:129.1917,note:"回尾浦取 STARIA，再開往 Centum。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EB%B3%80%EC%97%B4%EC%B0%A8%20%EC%B2%AD%EC%82%AC%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
-        {order:8,kind:"main",stopIndex:7,title:"Wannabe Clinic｜Centum",time:"16:30",lat:35.1689,lng:129.1305,note:"醫美組進診所；非醫美組在新世界／BEXCO 一帶。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%9B%8C%EB%84%88%EB%B9%84%EC%9D%98%EC%9B%90%20%EC%84%BC%ED%85%80%20%EB%B6%80%EC%82%B0"},
-        {order:9,kind:"food",stopIndex:8,title:"Centum 晚餐｜3 選 1",time:"19:00",lat:35.1694,lng:129.1290,note:"新世界 Food Hall／水邊最高／Okdoenjang。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90"}
+        {order:8,kind:"main",stopIndex:7,title:"Wannabe Clinic｜已預約",time:"17:00",lat:35.1689,lng:129.1305,note:"11/16 17:00 已確認；Centum City站 13 號出口，702 號。非醫美組在新世界／BEXCO 一帶。",photo:"assets/wannabe-arrival-guide.webp",naver:"https://naver.me/FhuCK7ei"},
+        {order:9,kind:"food",stopIndex:8,title:"Centum 晚餐｜療程後 3 選 1",time:"療程後",lat:35.1694,lng:129.1290,note:"療程結束時間依現場為準；新世界 Food Hall／水邊最高／Okdoenjang。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90"}
       ]
     },
     "day-1117":{
