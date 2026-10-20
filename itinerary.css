@@ -629,38 +629,36 @@
 @media (min-width:851px){
   .day-hero{
     align-items:stretch;
-    grid-auto-rows:1fr;
+    grid-template-rows:460px;
   }
   .day-hero-copy,
   .itin-gallery{
+    height:460px;
     min-height:460px;
-    height:auto;
-    max-height:none;
+    max-height:460px;
     box-sizing:border-box;
   }
   .day-hero-copy{
-    overflow:visible;
+    overflow:hidden;
     display:flex;
     flex-direction:column;
   }
   .day-hero-copy>p{
     font-size:14px;
-    line-height:1.75;
+    line-height:1.7;
     max-width:52ch;
   }
   .day-hero-summary{
     margin-top:auto;
-    padding-top:18px;
+    padding-top:16px;
   }
-  .itin-gallery{
-    height:100%;
-  }
+  .itin-gallery,
   .itin-gallery-view,
   .itin-gallery-item,
   .itin-gallery-item img{
-    height:100%;
+    height:460px;
     min-height:460px;
-    max-height:none;
+    max-height:460px;
   }
   .itin-gallery-item img{
     width:100%;
@@ -722,4 +720,12 @@
   }
   .clinic-simple-actions{margin-top:12px}
   .clinic-map-link{width:100%}
+}
+
+@media (min-width:851px){
+  .day-hero-copy h2{
+    font-size:34px;
+    line-height:1.28;
+    margin:8px 0 11px;
+  }
 }
