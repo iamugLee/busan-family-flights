@@ -29,18 +29,20 @@
       ]
     },
     "day-1116":{
-      title:"11/16 · 海雲台 → 青沙浦 → Centum",
+      title:"11/16 · 尾浦 → 青沙浦 → 松亭 → 海雲台 → Centum",
       points:[
-        {order:0,kind:"stay",title:"Ara Gaon｜廣安里住宿",time:"START",lat:35.1532,lng:129.1188,note:"從廣安里往東玩，不往西跑。",photo:IMG.gwangalli,naver:"https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
-        {order:1,kind:"food",stopIndex:0,title:"海雲台早餐｜暖胃 3 選 1",time:"08:30",lat:35.1620,lng:129.1587,note:"鮑魚粥／Geodae Gomtang／鱈魚湯。",photo:IMG.haeundae,naver:"https://naver.me/FIfsTBYJ"},
-        {order:2,kind:"main",stopIndex:1,title:"BUSAN X the SKY＋海雲台海灘",time:"10:00",lat:35.1593,lng:129.1695,note:"先上觀景台，再走海灘 20–30 分鐘。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/BUSAN%20X%20the%20SKY%20%EB%B6%80%EC%82%B0"},
-        {order:3,kind:"food",stopIndex:2,title:"尾浦小點心｜3 選 1",time:"11:45",lat:35.1597,lng:129.1710,note:"自然島鹽麵包／Milkyshop／Ove One。",photo:IMG.haeundae,naver:"https://naver.me/xrSQSF2f"},
-        {order:4,kind:"main",stopIndex:3,title:"尾浦站｜海岸列車去程",time:"12:45",lat:35.1598,lng:129.1718,note:"七人一起搭海岸列車前往青沙浦；STARIA 留在尾浦附近。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC%20%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
-        {order:5,kind:"food",stopIndex:4,title:"青沙浦午餐｜烤貝／海鮮",time:"13:30",lat:35.1600,lng:129.1914,note:"노란마후라／동백집／수민이네。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%EC%B2%AD%EC%82%AC%ED%8F%AC%20%EB%B6%80%EC%82%B0"},
-        {order:6,kind:"main",stopIndex:5,title:"青沙浦＋踏石展望台＋DIART",time:"14:30",lat:35.1628,lng:129.1962,note:"依長輩腳力散步；DIART Coffee 為彈性休息。",photo:IMG.haeundae,naver:"https://naver.me/Gxk1OJez"},
-        {order:7,kind:"main",stopIndex:6,title:"青沙浦站｜海岸列車回程",time:"15:30",lat:35.1601,lng:129.1917,note:"再搭海岸列車回尾浦取 STARIA，直接開往 Centum。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EB%B3%80%EC%97%B4%EC%B0%A8%20%EC%B2%AD%EC%82%AC%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
-        {order:8,kind:"main",stopIndex:7,title:"Wannabe Clinic｜已預約",time:"17:00",lat:35.1689,lng:129.1305,note:"11/16 17:00 已確認；醫美組前往 Wannabe，非醫美組在新世界／BEXCO 一帶。",photo:IMG.centum,naver:"https://naver.me/FhuCK7ei"},
-        {order:9,kind:"food",stopIndex:8,title:"Centum 晚餐｜療程後 3 選 1",time:"療程後",lat:35.1694,lng:129.1290,note:"療程結束時間依現場為準；新世界 Food Hall／水邊最高／Okdoenjang。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90"}
+        {order:0,kind:"stay",title:"Ara Gaon｜廣安里住宿",time:"START",lat:35.1532,lng:129.1188,note:"早上直接往尾浦，先處理海岸列車票。",photo:IMG.gwangalli,naver:"https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:1,kind:"main",stopIndex:0,title:"尾浦站｜兌換海岸列車票",time:"09:00",lat:35.1598,lng:129.1718,note:"先停 STARIA、先換票；實際搭乘時間以現場配票為準。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC%20%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:2,kind:"food",stopIndex:1,title:"自然島鹽麵包｜尾浦早餐",time:"09:10",lat:35.1595,lng:129.1708,note:"自然島為固定主選；Milkyshop／Ove One 備案。",photo:IMG.haeundae,naver:"https://naver.me/xrSQSF2f"},
+        {order:3,kind:"main",stopIndex:2,title:"尾浦 → 青沙浦｜海岸列車",time:"09:40 左右",lat:35.1598,lng:129.1718,note:"七人一起搭車；實際班次依早上兌換結果。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%20%ED%95%B4%EB%B3%80%EC%97%B4%EC%B0%A8%20%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:4,kind:"food",stopIndex:3,title:"青沙浦散步＋DIART Coffee",time:"10:05",lat:35.1598,lng:129.1930,note:"平交道、港邊、燈塔拍照；DIART 為主，另有兩間咖啡備案。",photo:IMG.haeundae,naver:"https://naver.me/Gxk1OJez"},
+        {order:5,kind:"main",stopIndex:4,title:"青沙浦 → 松亭｜步道＋海岸列車",time:"11:20",lat:35.1628,lng:129.1962,note:"體力好就走一小段到踏石展望台；其餘路段搭海岸列車。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%EC%B2%AD%EC%82%AC%ED%8F%AC%EB%8B%A4%EB%A6%BF%EB%8F%8C%EC%A0%84%EB%A7%9D%EB%8C%80%20%EB%B6%80%EC%82%B0"},
+        {order:6,kind:"food",stopIndex:5,title:"松亭｜午餐＋海灘＋咖啡",time:"12:00",lat:35.1785,lng:129.1996,note:"午餐 3 選 1；吃完走松亭海灘，咖啡視時間決定。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%EC%86%A1%EC%A0%95%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:7,kind:"main",stopIndex:6,title:"松亭 → 尾浦｜海岸列車回程",time:"14:00 左右",lat:35.1803,lng:129.1998,note:"最晚約 14:00–14:10 開始回程，避免壓縮下午行程。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%20%ED%95%B4%EB%B3%80%EC%97%B4%EC%B0%A8%20%EC%86%A1%EC%A0%95%EC%A0%95%EA%B1%B0%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:8,kind:"main",stopIndex:7,title:"BUSAN X the SKY",time:"14:40",lat:35.1593,lng:129.1695,note:"抓 50–60 分鐘，不在裡面久坐。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/BUSAN%20X%20the%20SKY%20%EB%B6%80%EC%82%B0"},
+        {order:9,kind:"main",stopIndex:8,title:"海雲台海灘｜短走拍照",time:"15:40",lat:35.1586,lng:129.1604,note:"約 20–25 分鐘；16:05–16:10 左右離開前往 Centum。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:10,kind:"main",stopIndex:9,title:"Wannabe Clinic｜已預約",time:"17:00",lat:35.1689,lng:129.1305,note:"建議 16:30 左右抵達 Centum；醫美組進診所，非醫美組自由活動。",photo:IMG.centum,naver:"https://naver.me/FhuCK7ei"},
+        {order:11,kind:"food",stopIndex:10,title:"Centum 晚餐｜療程後 3 選 1",time:"療程後",lat:35.1694,lng:129.1290,note:"療程結束時間依現場為準；新世界 Food Hall／水邊最高／Okdoenjang。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90%20%EB%B6%80%EC%82%B0"}
       ]
     },
     "day-1117":{
