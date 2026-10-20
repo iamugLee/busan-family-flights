@@ -107,10 +107,11 @@
 <section class="article-section"><div class="section-overline">SOURCES &amp; PHOTO CREDITS</div><h2 class="section-title">住宿及照片來源</h2><p class="sources-list">房源資料：<a href="https://www.airbnb.com.tw/rooms/1755014583623517500?guests=1&adults=1&s=67&unique_share_id=e9168d40-3aca-4394-ac93-aa11f301dde6" target="_blank" rel="noopener noreferrer">11/15–17 Airbnb 原始連結</a>、<a href="https://www.airbnb.com.tw/rooms/1604055148350260823?guests=1&adults=1&s=67&unique_share_id=6b7bf725-27ff-406d-8efa-667aeb421389" target="_blank" rel="noopener noreferrer">11/17–19 瑞好齋 Airbnb 房源介紹</a>。住宿費用與人數採本次旅伴提供資料，非 Airbnb 即時報價。</p><p class="sources-list">周邊景點參考：<a href="https://www.bsdonggu.go.kr/tour/index.donggu?menuCd=DOM_000000307001002001" target="_blank" rel="noopener noreferrer">釜山東區官方旅遊網站</a>。兩間住宿的相簿照片均由旅伴提供，第一間 Ara Gaon 七張、第二間瑞好齋七張；其中 Ara Gaon 的煙火照片為房源宣傳圖，不代表住宿當天有煙火表演。</p><p class="sources-list">Ara Gaon 資訊與實景相片由本次旅伴提供；廣安里周邊參考：<a href="https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&uc_seq=293" target="_blank" rel="noopener noreferrer">釜山觀光官方／民樂活魚市場</a>、<a href="https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000302011001000&uc_seq=1962" target="_blank" rel="noopener noreferrer">釜山觀光官方／Millac the Market</a>、<a href="https://www.gwangallimdrone.co.kr/en/overview" target="_blank" rel="noopener noreferrer">廣安里無人機秀官方時刻</a>。</p></section>
 </main><footer class="site-footer"><span>BUSAN NOTE. · 2026 釜山家族旅行</span><span>供旅伴共同參考，資料隨規劃進度更新。</span></footer>
 <script>
+if("scrollRestoration" in history) history.scrollRestoration="manual";
 const stayTabs=[...document.querySelectorAll(".stay-tab")];
 const stayPanels=[...document.querySelectorAll(".stay-panel")];
 
-function activateStay(id){
+function activateStay(id,scroll=true,updateUrl=true){
  const target=document.getElementById(id);
  if(!target)return;
  stayTabs.forEach(tab=>{
@@ -120,10 +121,14 @@ function activateStay(id){
  });
  stayPanels.forEach(panel=>panel.hidden=panel!==target);
 
- const url=new URL(location.href);
- if(id==="stay1")url.searchParams.delete("stay");
- else url.searchParams.set("stay",id);
- history.replaceState(null,"",url.pathname+(url.search?url.search:""));
+ if(updateUrl){
+  const url=new URL(location.href);
+  if(id==="stay1")url.searchParams.delete("stay");
+  else url.searchParams.set("stay",id);
+  history.replaceState(null,"",url.pathname+(url.search?url.search:""));
+ }
+
+ if(scroll)window.scrollTo({top:0,left:0,behavior:"auto"});
 
  requestAnimationFrame(()=>{
   target.querySelectorAll(".stay-gallery-view").forEach(view=>{
@@ -135,7 +140,13 @@ function activateStay(id){
 stayTabs.forEach(tab=>tab.addEventListener("click",()=>activateStay(tab.dataset.stayTarget)));
 
 const initialStay=new URL(location.href).searchParams.get("stay");
-activateStay(initialStay==="stay2"?"stay2":"stay1");
+activateStay(initialStay==="stay2"?"stay2":"stay1",false,false);
+
+const forceStayTop=()=>window.scrollTo({top:0,left:0,behavior:"auto"});
+forceStayTop();
+requestAnimationFrame(forceStayTop);
+setTimeout(forceStayTop,0);
+window.addEventListener("load",forceStayTop,{once:true});
 
 document.querySelectorAll(".stay-gallery").forEach(g=>{
  const view=g.querySelector(".stay-gallery-view"), slides=[...g.querySelectorAll(".stay-gallery-item")];

@@ -1,5 +1,6 @@
 
 (() => {
+if("scrollRestoration" in history) history.scrollRestoration="manual";
   const IMG={
     gwangalli:"https://commons.wikimedia.org/wiki/Special:FilePath/Gwangalli%20Beach%20and%20Gwangan%20Bridge%20Busan.jpg?width=900",
     gwangalliNight:"https://commons.wikimedia.org/wiki/Special:FilePath/Gwangan%20Bridge%20at%20night.JPG?width=900",
@@ -331,7 +332,7 @@
     }
 
     setTimeout(()=>{if(maps[id]){maps[id].map.invalidateSize();fitDay(id);}},80);
-    if(scroll)window.scrollTo({top:document.querySelector(".itinerary-toolbar").offsetTop-90,behavior:"smooth"});
+    if(scroll)window.scrollTo({top:0,left:0,behavior:"auto"});
   };
 
   tabs.forEach(tab=>tab.addEventListener("click",()=>activate(tab.dataset.target)));
