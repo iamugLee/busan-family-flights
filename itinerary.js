@@ -42,7 +42,8 @@
         {order:8,kind:"main",stopIndex:7,title:"BUSAN X the SKY",time:"14:40",lat:35.1593,lng:129.1695,note:"抓 50–60 分鐘，不在裡面久坐。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/BUSAN%20X%20the%20SKY%20%EB%B6%80%EC%82%B0"},
         {order:9,kind:"main",stopIndex:8,title:"海雲台海灘｜短走拍照",time:"15:40",lat:35.1586,lng:129.1604,note:"約 20–25 分鐘；16:05–16:10 左右離開前往 Centum。",photo:IMG.haeundae,naver:"https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
         {order:10,kind:"main",stopIndex:9,title:"Wannabe Clinic｜已預約",time:"17:00",lat:35.1689,lng:129.1305,note:"建議 16:30 左右抵達 Centum；醫美組進診所，非醫美組自由活動。",photo:IMG.centum,naver:"https://naver.me/FhuCK7ei"},
-        {order:11,kind:"food",stopIndex:10,title:"Centum 晚餐｜療程後 3 選 1",time:"療程後",lat:35.1694,lng:129.1290,note:"療程結束時間依現場為準；新世界 Food Hall／水邊最高／Okdoenjang。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90%20%EB%B6%80%EC%82%B0"}
+        {order:11,kind:"food",stopIndex:10,title:"Centum 晚餐｜療程後 3 選 1",time:"療程後",lat:35.1694,lng:129.1290,note:"療程結束時間依現場為準；新世界 Food Hall／水邊最高／Okdoenjang。",photo:IMG.centum,naver:"https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90%20%EB%B6%80%EC%82%B0"},
+        {order:12,kind:"optional",stopIndex:11,title:"부산식｜廣安里深夜烤肉",time:"深夜 OPTIONAL",lat:35.1561,lng:129.1137,note:"17:00–06:00；回廣安里後還有精神再去。",photo:IMG.gwangalliNight,naver:"https://naver.me/x4FLyFf3"}
       ]
     },
     "day-1117":{
@@ -50,13 +51,13 @@
       points:[
         {order:0,kind:"stay",title:"Ara Gaon｜廣安里住宿",time:"START",lat:35.1532,lng:129.1188,note:"退房後一路往西移動。",photo:IMG.gwangalli,naver:"https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
         {order:1,kind:"main",stopIndex:0,title:"瑞好齋／草梁・釜山站生活圈",time:"09:30",lat:35.1160,lng:129.0418,note:"先處理七人的行李，再開始南浦行程。",photo:IMG.busanStation,naver:"https://map.naver.com/p/search/%EC%B4%88%EB%9F%89%EC%97%AD%20%EB%B6%80%EC%82%B0"},
-        {order:2,kind:"main",stopIndex:1,title:"札嘎其 → BIFF → 國際市場 → 富平",time:"11:00",lat:35.0972,lng:129.0295,note:"STARIA 停一次後用走的。",photo:IMG.nampo,naver:"https://map.naver.com/p/search/%EC%9E%90%EA%B0%88%EC%B9%98%EC%8B%9C%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
-        {order:3,kind:"food",stopIndex:2,title:"札嘎其午餐｜海鮮 3 選 1",time:"11:30",lat:35.0967,lng:129.0303,note:"韓月生魚片／釜山名物生魚片／미정횟집。",photo:IMG.market,naver:"https://map.naver.com/p/search/%ED%95%9C%EC%9B%94%ED%9A%9F%EC%A7%91%20%EC%9E%90%EA%B0%88%EC%B9%98%20%EB%B6%80%EC%82%B0"},
-        {order:4,kind:"food",stopIndex:3,title:"BIFF／富平市場點心",time:"13:30",lat:35.0982,lng:129.0288,note:"種子糖餅／昇基糖餅／韭菜煎餅。",photo:IMG.market,naver:"https://map.naver.com/p/search/BIFF%EA%B4%91%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
-        {order:5,kind:"main",stopIndex:4,title:"松島海上纜車",time:"14:45",lat:35.0765,lng:129.0235,note:"搭纜車前往岩南公園／上站。",photo:IMG.songdo,naver:"https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4%20%EB%B6%80%EC%82%B0"},
-        {order:6,kind:"main",stopIndex:5,title:"松島龍宮雲橋",time:"15:30",lat:35.0609,lng:129.0174,note:"纜車上站順路走龍宮雲橋。",photo:IMG.songdo,naver:"https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%EC%9A%A9%EA%B6%81%EA%B5%AC%EB%A6%84%EB%8B%A4%EB%A6%AC%20%EB%B6%80%EC%82%B0"},
-        {order:7,kind:"main",stopIndex:6,title:"松島纜車回程",time:"16:10",lat:35.0766,lng:129.0237,note:"回松島海灘後依體力短暫散步。",photo:IMG.songdo,naver:"https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4%20%EB%B6%80%EC%82%B0"},
-        {order:8,kind:"food",stopIndex:7,title:"南浦晚餐｜豬腳／烤肉",time:"18:30",lat:35.0990,lng:129.0288,note:"Busan Jokbal／漢陽豬腳／味讚王富平店。",photo:IMG.nampo,naver:"https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%A1%B1%EB%B0%9C%20%EB%82%A8%ED%8F%AC%EB%8F%99"}
+        {order:2,kind:"main",stopIndex:8,title:"札嘎其 → BIFF → 國際市場 → 富平",time:"11:00",lat:35.0972,lng:129.0295,note:"STARIA 停一次後用走的。",photo:IMG.nampo,naver:"https://map.naver.com/p/search/%EC%9E%90%EA%B0%88%EC%B9%98%EC%8B%9C%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:3,kind:"food",stopIndex:8,title:"札嘎其午餐｜海鮮 3 選 1",time:"11:30",lat:35.0967,lng:129.0303,note:"韓月生魚片／釜山名物生魚片／미정횟집。",photo:IMG.market,naver:"https://map.naver.com/p/search/%ED%95%9C%EC%9B%94%ED%9A%9F%EC%A7%91%20%EC%9E%90%EA%B0%88%EC%B9%98%20%EB%B6%80%EC%82%B0"},
+        {order:4,kind:"food",stopIndex:8,title:"BIFF／富平市場點心",time:"13:30",lat:35.0982,lng:129.0288,note:"種子糖餅／昇基糖餅／韭菜煎餅。",photo:IMG.market,naver:"https://map.naver.com/p/search/BIFF%EA%B4%91%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:5,kind:"main",stopIndex:8,title:"松島海上纜車",time:"14:45",lat:35.0765,lng:129.0235,note:"搭纜車前往岩南公園／上站。",photo:IMG.songdo,naver:"https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4%20%EB%B6%80%EC%82%B0"},
+        {order:6,kind:"main",stopIndex:8,title:"松島龍宮雲橋",time:"15:30",lat:35.0609,lng:129.0174,note:"纜車上站順路走龍宮雲橋。",photo:IMG.songdo,naver:"https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%EC%9A%A9%EA%B6%81%EA%B5%AC%EB%A6%84%EB%8B%A4%EB%A6%AC%20%EB%B6%80%EC%82%B0"},
+        {order:7,kind:"main",stopIndex:8,title:"松島纜車回程",time:"16:10",lat:35.0766,lng:129.0237,note:"回松島海灘後依體力短暫散步。",photo:IMG.songdo,naver:"https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4%20%EB%B6%80%EC%82%B0"},
+        {order:8,kind:"food",stopIndex:8,title:"Tonshou 南浦｜晚餐主線",time:"18:30 目標",lat:35.1019,lng:129.0309,note:"上午 11:00 Catchtable 已分 4＋3 兩筆候位；實際晚餐時間依兩筆叫號進度。",photo:IMG.nampo,naver:"https://map.naver.com/p/entry/place/1066416427"}
       ]
     },
     "day-1118":{
