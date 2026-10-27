@@ -62,17 +62,20 @@ if("scrollRestoration" in history) history.scrollRestoration="manual";
       ]
     },
     "day-1118":{
-      title:"11/18 · 影島 → 西面 → Diamond Bay",
+      title:"11/18 · 南浦 → 影島 → 龍湖洞 → Diamond Bay → 大淵洞 → 荒嶺山",
       points:[
-        {order:0,kind:"stay",title:"瑞好齋｜草梁／釜山站生活圈",time:"START",lat:35.1160,lng:129.0418,note:"第二間住宿作為今天起點。",photo:IMG.busanStation,naver:"https://map.naver.com/p/search/%EC%B4%88%EB%9F%89%EC%97%AD%20%EB%B6%80%EC%82%B0"},
-        {order:1,kind:"main",stopIndex:0,title:"白淺灘文化村",time:"09:30",lat:35.0784,lng:129.0437,note:"只走精華段，不走完整海岸線。",photo:IMG.huinnyeoul,naver:"https://map.naver.com/p/search/%ED%9D%B0%EC%97%AC%EC%9A%B8%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84%20%EB%B6%80%EC%82%B0"},
-        {order:2,kind:"food",stopIndex:1,title:"影島海景咖啡／輕食",time:"11:00",lat:35.0780,lng:129.0428,note:"Aether／AGE／P.ARK 三選一。",photo:IMG.huinnyeoul,naver:"https://naver.me/5IfzEFVG"},
-        {order:3,kind:"main",stopIndex:2,title:"回草梁／釜山站休息",time:"13:30",lat:35.1160,lng:129.0418,note:"整理戰利品、休息，避免一路趕場。",photo:IMG.busanStation,naver:"https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%97%AD"},
-        {order:4,kind:"main",stopIndex:3,title:"西面百貨・地下街・田浦",time:"15:00",lat:35.1570,lng:129.0560,note:"下午回市中心自由逛。",photo:IMG.seomyeon,naver:"https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%B6%80%EC%82%B0%EB%B3%B8%EC%A0%90"},
-        {order:5,kind:"food",stopIndex:4,title:"西面晚餐｜烤肉／烤腸",time:"17:15",lat:35.1568,lng:129.0555,note:"味讚王／설야멱／청춘소곱창。",photo:IMG.seomyeon,naver:"https://naver.me/GL8JyYBm"},
-        {order:6,kind:"main",stopIndex:5,title:"前往龍湖灣・Diamond Bay 報到",time:"18:20",lat:35.1300,lng:129.1200,note:"目標約 19:00 前抵達碼頭。",photo:IMG.gwangalliNight,naver:"https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EB%B2%A0%EC%9D%B4%20%EB%B6%80%EC%82%B0"},
-        {order:7,kind:"main",stopIndex:6,title:"Diamond Bay 鑽石灣遊艇",time:"19:30",lat:35.1302,lng:129.1204,note:"暫排夜航，作為這趟主要夜景體驗。",photo:IMG.gwangalliNight,naver:"https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EB%B2%A0%EC%9D%B4%20%EB%B6%80%EC%82%B0"},
-        {order:8,kind:"optional",stopIndex:7,title:"荒嶺山觀景台",time:"20:45",lat:35.1574,lng:129.0827,note:"天氣好、長輩還有精神才加碼。",photo:IMG.gwangalliNight,naver:"https://map.naver.com/p/search/%ED%99%A9%EB%A0%B9%EC%82%B0%20%EC%A0%84%EB%A7%9D%EB%8C%80%20%EB%B6%80%EC%82%B0"}
+        {order:0,kind:"stay",title:"瑞好齋｜草梁／釜山站生活圈",time:"START",lat:35.1160,lng:129.0418,note:"第二間住宿；早上往南浦吃早餐。",photo:IMG.busanStation,naver:"https://map.naver.com/p/search/%EC%B4%88%EB%9F%89%EC%97%AD%20%EB%B6%80%EC%82%B0"},
+        {order:1,kind:"food",stopIndex:0,title:"EGGDROP 南浦洞店｜早餐",time:"08:00",lat:35.098656,lng:129.0340567,note:"韓式滑蛋吐司；七人點餐預留約40分鐘。",naver:"https://naver.me/FN7XZFRx"},
+        {order:2,kind:"main",stopIndex:1,title:"白淺灘文化村｜拍照散步",time:"09:10",lat:35.0784,lng:129.0437,note:"只走海邊巷弄精華段，避免讓長輩走過多階梯。",photo:IMG.huinnyeoul,naver:"https://map.naver.com/p/search/%ED%9D%B0%EC%97%AC%EC%9A%B8%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84%20%EB%B6%80%EC%82%B0"},
+        {order:3,kind:"food",stopIndex:2,title:"AGE 아게｜影島海景咖啡",time:"10:30",lat:35.0598722,lng:129.0714442,note:"影島東側海景咖啡；約11:10離開前往龍湖洞。",photo:IMG.huinnyeoul,naver:"https://naver.me/5IfzEFVG"},
+        {order:4,kind:"food",stopIndex:3,title:"Namakzip 나막집 龍湖洞本店｜午餐",time:"12:00",lat:35.1310,lng:129.1218,note:"米其林入選豬肉清湯飯；七人可能需候位或拆桌。位置以 NAVER MAP 為準。",naver:"https://naver.me/FRLNdrjG"},
+        {order:5,kind:"main",stopIndex:4,title:"龍湖傳統市場 용호골목시장",time:"13:30",lat:35.1220,lng:129.1142,note:"走馬看花約50分鐘；巷弄與STARIA停車需留意。位置以 NAVER MAP 為準。",naver:"https://map.naver.com/p/search/%EC%9A%A9%ED%98%B8%EA%B3%A8%EB%AA%A9%EC%8B%9C%EC%9E%A5%20%EB%B6%80%EC%82%B0"},
+        {order:6,kind:"food",stopIndex:5,title:"Isaac Toast LG Metro City｜彈性點心",time:"15:00",lat:35.1303,lng:129.1209,note:"鄰近碼頭；不餓就跳過，以外帶為主。位置以 NAVER MAP 為準。",naver:"https://naver.me/FPnE309e"},
+        {order:7,kind:"main",stopIndex:6,title:"Diamond Bay 碼頭｜停車報到",time:"15:30",lat:35.1300,lng:129.1200,note:"最晚16:00前完成報到準備，攜帶護照及已購 Busan Pass。",naver:"https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EB%B2%A0%EC%9D%B4%20%EB%B6%80%EC%82%B0"},
+        {order:8,kind:"main",stopIndex:7,title:"Diamond Bay｜16:30 夕陽遊艇",time:"16:30",lat:35.1302,lng:129.1204,note:"預計17:20返航。Pass已買，七人航次尚待確認預約；不再安排19:30夜航。",naver:"https://diamondbay.co.kr/zh-TW/visit-busan-pass/"},
+        {order:9,kind:"food",stopIndex:8,title:"青春生魚片店 청춘횟집｜晚餐",time:"18:00",lat:35.1346662,lng:129.0947966,note:"大淵洞生魚片／大鰤魚；七人訂位、候位狀況需確認。駕駛不飲酒。",naver:"https://naver.me/xbAqmJA9"},
+        {order:10,kind:"main",stopIndex:9,title:"荒嶺山觀景台｜夜景",time:"20:30",lat:35.1574,lng:129.0827,note:"夜間上山看全城燈光；視風雨及長輩體力彈性縮短。",photo:IMG.gwangalliNight,naver:"https://map.naver.com/p/search/%ED%99%A9%EB%A0%B9%EC%82%B0%20%EB%B4%89%EC%88%98%EB%8C%80%20%EB%B6%80%EC%82%B0"},
+        {order:11,kind:"optional",stopIndex:10,title:"青春韓牛烤腸 청춘소곱창｜西面宵夜",time:"22:00+",lat:35.1542,lng:129.0580,note:"有胃口、體力才去；位置以 NAVER MAP 為準。",photo:IMG.seomyeon,naver:"https://map.naver.com/p/search/%EC%B2%AD%EC%B6%98%EC%86%8C%EA%B3%B1%EC%B0%BD%20%EC%84%9C%EB%A9%B4%20%EB%B6%80%EC%82%B0"}
       ]
     },
     "day-1119":{
